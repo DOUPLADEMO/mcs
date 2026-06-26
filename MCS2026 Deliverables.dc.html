@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #F0EAE0; font-family: 'DM Sans', sans-serif; color: #1A1A1A; }
+  ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background: #F0EAE0; } ::-webkit-scrollbar-thumb { background: #D0C8BC; border-radius: 3px; }
+</style>
+</helmet>
+
+<!-- Header -->
+<div style="background:rgba(255,255,255,0.97); border-bottom:1px solid #E8E0D8; box-shadow:0 1px 8px rgba(0,0,0,0.05); position:sticky; top:0; z-index:100;">
+  <div style="max-width:1040px; margin:0 auto; padding:0 28px; height:52px; display:flex; align-items:center; justify-content:space-between;">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; color:#1A1A1A; letter-spacing:-0.02em;">MCS 2026</span>
+      <span style="color:#C8C0B8;">—</span>
+      <span style="font-family:'DM Mono',monospace; font-size:10px; color:#A09888; letter-spacing:0.12em; text-transform:uppercase;">Agency Deliverables · DOUPLA</span>
+    </div>
+    <span style="font-family:'DM Mono',monospace; font-size:10px; color:#C0B8B0; letter-spacing:0.08em; text-transform:uppercase;">9 deliverable</span>
+  </div>
+</div>
+
+<div style="max-width:1040px; margin:0 auto; padding:28px;">
+
+  <!-- Flow diagram -->
+  <div style="background:#FFFFFF; border-radius:10px; padding:20px 24px; margin-bottom:28px; box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+    <div style="font-family:'DM Mono',monospace; font-size:10px; color:#A09888; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:14px;">Hogyan épül fel</div>
+    <div style="display:flex; align-items:center; flex-wrap:wrap; gap:0;">
+      <div style="background:#FEF9EC; border:1px solid #E8D8A0; border-radius:6px; padding:8px 14px; text-align:center;">
+        <div style="font-family:'DM Mono',monospace; font-size:9px; color:#C8A96A; text-transform:uppercase;">1</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:#2A1808; margin-top:2px;">Brand<br>Essence</div>
+      </div>
+      <div style="padding:0 8px; color:#C8C0B8; font-size:18px; font-weight:300;">→</div>
+      <div style="background:#FFF8F2; border:1px solid #F0D0B0; border-radius:6px; padding:8px 14px; text-align:center;">
+        <div style="font-family:'DM Mono',monospace; font-size:9px; color:#D4894A; text-transform:uppercase;">2</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:#2A1808; margin-top:2px;">Comm.<br>Strategy</div>
+      </div>
+      <div style="padding:0 8px; color:#C8C0B8; font-size:18px; font-weight:300;">→</div>
+      <div style="background:#F8F4FF; border:1px solid #D8C8F0; border-radius:6px; padding:8px 14px;">
+        <div style="font-family:'DM Mono',monospace; font-size:9px; color:#9B7EC8; text-transform:uppercase; margin-bottom:4px;">2a–2d</div>
+        <div style="display:flex; gap:6px; flex-wrap:wrap;">
+          <div style="background:rgba(155,126,200,0.1); border-radius:4px; padding:3px 8px; font-family:'DM Mono',monospace; font-size:9px; color:#7A5EA8;">Big Idea</div>
+          <div style="background:rgba(74,143,217,0.1); border-radius:4px; padding:3px 8px; font-family:'DM Mono',monospace; font-size:9px; color:#2A6088;">KV + ToV</div>
+          <div style="background:rgba(123,104,238,0.1); border-radius:4px; padding:3px 8px; font-family:'DM Mono',monospace; font-size:9px; color:#5040B0;">Tagline</div>
+          <div style="background:rgba(42,168,160,0.1); border-radius:4px; padding:3px 8px; font-family:'DM Mono',monospace; font-size:9px; color:#1A8880;">Média</div>
+        </div>
+      </div>
+      <div style="padding:0 8px; color:#C8C0B8; font-size:18px; font-weight:300;">→</div>
+      <div style="background:#EEFAF9; border:1px solid #C0E8E4; border-radius:6px; padding:8px 14px; text-align:center;">
+        <div style="font-family:'DM Mono',monospace; font-size:9px; color:#2AA8A0; text-transform:uppercase;">3</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:#0A2828; margin-top:2px;">TVC<br>20mp</div>
+      </div>
+      <div style="padding:0 8px; color:#C8C0B8; font-size:18px; font-weight:300;">→</div>
+      <div style="background:#F0F8F1; border:1px solid #B8E0C0; border-radius:6px; padding:8px 14px; text-align:center;">
+        <div style="font-family:'DM Mono',monospace; font-size:9px; color:#4DAF6B; text-transform:uppercase;">4</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:#152018; margin-top:2px;">Touch-<br>pontok</div>
+      </div>
+      <div style="padding:0 8px; color:#C8C0B8; font-size:18px; font-weight:300;">→</div>
+      <div style="background:#FFF0EE; border:1px solid #F8C8C0; border-radius:6px; padding:8px 14px; text-align:center;">
+        <div style="font-family:'DM Mono',monospace; font-size:9px; color:#E05858; text-transform:uppercase;">5</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:#2A0808; margin-top:2px;">Virális<br>ötletek</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DELIVERABLE 1: Brand Essence -->
+  <div style="background:#FFFFFF; border-radius:10px; border:1px solid #EAE0D4; box-shadow:0 1px 4px rgba(0,0,0,0.05); margin-bottom:10px; overflow:hidden;">
+    <div onClick="{{ togD1 }}" style="display:flex; align-items:center; padding:18px 22px; cursor:pointer; gap:14px; user-select:none;" style-hover="background:#FDFAF6;">
+      <div style="width:34px; height:34px; border-radius:7px; background:#FEF9EC; border:1px solid #E8D8A0; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; color:#C8A96A;">1</span>
+      </div>
+      <div style="flex:1; min-width:0;">
+        <div style="font-family:'DM Mono',monospace; font-size:9px; color:#C8A96A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:3px;">Strategic Foundation</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A; letter-spacing:-0.01em;">Brand Essence Finalisation (incl. OBI)</div>
+      </div>
+      <div data-dchev="d1" style="font-size:14px; color:#C8C0B8; transition:transform 300ms ease;">↓</div>
+    </div>
+    <div data-dbody="d1" style="max-height:0; overflow:hidden; transition:max-height 450ms ease;">
+      <div style="border-top:1px solid #F0E8E0; background:#FAFAF6; display:flex; padding:0 22px; overflow-x:auto;">
+        <button data-dtab="d1-0" onClick="{{ tabD1_0 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid #C8A96A; color:#1A1A1A; font-weight:700; cursor:pointer; white-space:nowrap;">💡 Mi ez?</button>
+        <button data-dtab="d1-2" onClick="{{ tabD1_2 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid transparent; color:#888; cursor:pointer; white-space:nowrap;">🌍 Példák</button>
+        <button data-dtab="d1-3" onClick="{{ tabD1_3 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid transparent; color:#888; cursor:pointer; white-space:nowrap;">→ DOUPLA válasz</button>
+      </div>
+      <div data-dpanel="d1-0" style="padding:22px 24px;">
+        <p style="font-size:13px; color:#3A3A3A; line-height:1.75; margin:0 0 12px;">A brand essence az a egyetlen alapigazság, ami a brandet meghatározza — nem az, amit elad, hanem amit az embereknek jelent. Időtálló, sajátítható, érzelmileg rezonáló.</p>
+        <p style="font-size:13px; color:#3A3A3A; line-height:1.75; margin:0;">Az OBI (Ownable Brand Idea) az a stratégiai terület, ahol a Mizo Coffee Selection nyerhet, és amelyet egyetlen versenytárs sem állíthat hitelesen magáról. Közös munka = ügynökség és ügyfél együtt hangolódik össze.</p>
+      </div>
+
+      <div data-dpanel="d1-2" style="padding:22px 24px; display:none;">
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px;">
+          <div style="background:#F8F4EE; border-radius:6px; padding:14px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#C8A96A; text-transform:uppercase; margin-bottom:6px;">CADBURY</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">OBI: 'Generosity.' Nem csokoládé, hanem az adás emberi aktusa. Minden kampány ezen belül él.</div></div>
+          <div style="background:#F8F4EE; border-radius:6px; padding:14px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#C8A96A; text-transform:uppercase; margin-bottom:6px;">HEINZ</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">OBI: 'The irreplaceable original.' Senki nem elégszik meg a másodikkal.</div></div>
+          <div style="background:#F8F4EE; border-radius:6px; padding:14px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#C8A96A; text-transform:uppercase; margin-bottom:6px;">OATLY</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">OBI: 'Radical transparency.' Minden a szűretlen becsületet tükrözi.</div></div>
+        </div>
+      </div>
+      <div data-dpanel="d1-3" style="padding:22px 24px; display:none;">
+        <div style="background:#FEF9EC; border:1px solid #E8D8A0; border-radius:8px; padding:16px 18px; margin-bottom:14px;">
+          <div style="font-family:'DM Mono',monospace; font-size:9px; color:#C8A96A; text-transform:uppercase; margin-bottom:8px;">Amit csak a Mizo tud sajátítani</div>
+          <p style="font-size:13px; color:#4A3820; line-height:1.7; margin:0;">A Hell nem tud tejről beszélni. A privát label nem tud kézműves minőségről. A Mizonak 60+ éves tejipar tapasztalata van — az áthidalás a tej-mesterség alkalmazása a ready-to-drink kávéban.</p>
+        </div>
+        <div style="font-family:'DM Mono',monospace; font-size:9px; color:#888; text-transform:uppercase; margin-bottom:10px;">OBI Jelöltek</div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <div style="display:flex; gap:10px; align-items:flex-start; background:#F8F4EE; border-radius:6px; padding:12px 14px;"><span style="color:#C8A96A; flex-shrink:0;">→</span><div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; color:#1A1A1A; margin-bottom:3px;">"Coffee that actually knows milk."</div><div style="font-size:12px; color:#6A6A6A;">Funkcionális + sajátítható. Hell ezt sosem állíthatja.</div></div></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; background:#F8F4EE; border-radius:6px; padding:12px 14px;"><span style="color:#C8A96A; flex-shrink:0;">→</span><div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; color:#1A1A1A; margin-bottom:3px;">"A Mizó Kávézó. Mindig nyitva."</div><div style="font-size:12px; color:#6A6A6A;">Érzelmi terület. Helyélményt ígér, nem terméket.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DELIVERABLE 2: Communication Strategy -->
+  <div style="background:#FFFFFF; border-radius:10px; border:1px solid #EAE0D4; box-shadow:0 1px 4px rgba(0,0,0,0.05); margin-bottom:10px; overflow:hidden;">
+    <div onClick="{{ togD2 }}" style="display:flex; align-items:center; padding:18px 22px; cursor:pointer; gap:14px; user-select:none;" style-hover="background:#FFFAF6;">
+      <div style="width:34px; height:34px; border-radius:7px; background:#FFF8F2; border:1px solid #F0D0B0; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; color:#D4894A;">2</span>
+      </div>
+      <div style="flex:1; min-width:0;">
+        <div style="font-family:'DM Mono',monospace; font-size:9px; color:#D4894A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:3px;">Strategic + Creative</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A; letter-spacing:-0.01em;">Communication Strategy — Full Relaunch</div>
+      </div>
+      <div data-dchev="d2" style="font-size:14px; color:#C8C0B8; transition:transform 300ms ease;">↓</div>
+    </div>
+    <div data-dbody="d2" style="max-height:0; overflow:hidden; transition:max-height 450ms ease;">
+      <div style="border-top:1px solid #F0E8E0; background:#FAFAF6; display:flex; padding:0 22px; overflow-x:auto;">
+        <button data-dtab="d2-0" onClick="{{ tabD2_0 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid #D4894A; color:#1A1A1A; font-weight:700; cursor:pointer; white-space:nowrap;">💡 Mi ez?</button>
+        <button data-dtab="d2-2" onClick="{{ tabD2_2 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid transparent; color:#888; cursor:pointer; white-space:nowrap;">🌍 Példák</button>
+        <button data-dtab="d2-3" onClick="{{ tabD2_3 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid transparent; color:#888; cursor:pointer; white-space:nowrap;">→ DOUPLA válasz</button>
+      </div>
+      <div data-dpanel="d2-0" style="padding:22px 24px;"><p style="font-size:13px; color:#3A3A3A; line-height:1.75; margin:0;">Egy integrált terv, amely megmagyarázza, HOGYAN szólal meg a brand, MIT mond, és MIÉRT tör át az üzenet. Nem csupán médiaterv — ez a stratégiai logika minden kreatív döntés mögött.</p></div>
+
+      <div data-dpanel="d2-2" style="padding:22px 24px; display:none;">
+        <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:14px;">
+          <div style="background:#FFF8F2; border-radius:6px; padding:14px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#D4894A; text-transform:uppercase; margin-bottom:6px;">DESPERADOS relaunch</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">Terméktulajdonságból ('tequila-ízű sör') érzelmi területté ('fuel for unexpected adventures') váltott — ezzel felnyitotta a teljes kreatív rendszert fesztiválokon, digitalon, OOH-n.</div></div>
+          <div style="background:#FFF8F2; border-radius:6px; padding:14px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#D4894A; text-transform:uppercase; margin-bottom:6px;">INNOCENT Smoothies</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">Stratégia: 'natural goodness' tulajdonjoga személyiségen, nem összetevőlistán keresztül.</div></div>
+        </div>
+      </div>
+      <div data-dpanel="d2-3" style="padding:22px 24px; display:none;">
+        <div style="background:#FFF8F2; border:1px solid #F0D0B0; border-radius:8px; padding:16px 18px; margin-bottom:14px;">
+          <div style="font-family:'DM Mono',monospace; font-size:9px; color:#D4894A; text-transform:uppercase; margin-bottom:8px;">Az egyetlen insight</div>
+          <p style="font-size:13px; color:#4A3020; line-height:1.7; margin:0;">A Gen Z és Millennials kimerültek az 'energia' mint brand-érték miatt. Nem akarnak 'feltöltődni' — élvezni akarnak. A Hell teljesítményt árul. A Mizo Coffee Selection az <em>élvezetet</em> sajátíthatja el.</p>
+        </div>
+        <div style="background:#F8F4EE; border-radius:6px; padding:14px 16px;">
+          <div style="font-family:'DM Mono',monospace; font-size:9px; color:#888; text-transform:uppercase; margin-bottom:6px;">Core Insight</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:700; color:#1A1A1A; font-style:italic;">"Nem kell még egy kick. Egy kávét akarok, amire tényleg vágyom."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DELIVERABLE 2a: Big Idea -->
+  <div style="background:#FFFFFF; border-radius:10px; border:1px solid #EAE0D4; box-shadow:0 1px 4px rgba(0,0,0,0.05); margin-bottom:10px; margin-left:28px; overflow:hidden; border-left:3px solid #9B7EC8;">
+    <div onClick="{{ togD2a }}" style="display:flex; align-items:center; padding:16px 22px; cursor:pointer; gap:14px; user-select:none;" style-hover="background:#FAF8FF;">
+      <div style="width:34px; height:34px; border-radius:7px; background:#F8F4FF; border:1px solid #D8C8F0; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px; color:#9B7EC8;">2a</span>
+      </div>
+      <div style="flex:1; min-width:0;">
+        <div style="font-family:'DM Mono',monospace; font-size:9px; color:#9B7EC8; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:3px;">Creative Strategy</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px; color:#1A1A1A; letter-spacing:-0.01em;">Big Idea — Campaign Essence + Creative Concept</div>
+      </div>
+      <div data-dchev="d2a" style="font-size:14px; color:#C8C0B8; transition:transform 300ms ease;">↓</div>
+    </div>
+    <div data-dbody="d2a" style="max-height:0; overflow:hidden; transition:max-height 450ms ease;">
+      <div style="border-top:1px solid #F0E8E0; background:#FAFAF6; display:flex; padding:0 22px; overflow-x:auto;">
+        <button data-dtab="d2a-0" onClick="{{ tabD2a_0 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid #9B7EC8; color:#1A1A1A; font-weight:700; cursor:pointer; white-space:nowrap;">💡 Mi ez?</button>
+        <button data-dtab="d2a-2" onClick="{{ tabD2a_2 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid transparent; color:#888; cursor:pointer; white-space:nowrap;">🌍 Példák</button>
+        <button data-dtab="d2a-3" onClick="{{ tabD2a_3 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid transparent; color:#888; cursor:pointer; white-space:nowrap;">→ DOUPLA válasz</button>
+      </div>
+      <div data-dpanel="d2a-0" style="padding:22px 24px;"><p style="font-size:13px; color:#3A3A3A; line-height:1.75; margin:0;">A központi kreatív gondolat, ami minden touchponton él — TV, social, in-store, csomagolás, events. Nem tagline, nem execúció. Egy kreatív lencse. Átmegy a 10 éves teszten: ebből az ötletből tudnál-e még egy évtized múlva is munkát csinálni?</p></div>
+
+      <div data-dpanel="d2a-2" style="padding:22px 24px; display:none;">
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="background:#FAF8FF; border-radius:6px; padding:12px 14px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#9B7EC8; text-transform:uppercase; margin-bottom:4px;">OLD SPICE</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">Big Idea: az abszurd magabiztosság felülmúlja az őszinte férfiasságot. Működött TVC-n, socialon, Redditen, csomagoláson — mindenen.</div></div>
+          <div style="background:#FAF8FF; border-radius:6px; padding:12px 14px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#9B7EC8; text-transform:uppercase; margin-bottom:4px;">DOVE 'Real Beauty'</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">Big Idea: a nők alábecsülik saját szépségüket. Filmek, óriásplakátok, social — egy ötlet, 20 év.</div></div>
+        </div>
+      </div>
+      <div data-dpanel="d2a-3" style="padding:22px 24px; display:none;">
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="background:#FAF8FF; border:1px solid #E0D0F8; border-radius:8px; padding:14px 16px;">
+            <div style="font-family:'DM Mono',monospace; font-size:9px; color:#9B7EC8; text-transform:uppercase; margin-bottom:6px;">Big Idea — 1. jelölt</div>
+            <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px; color:#1A1A1A; margin-bottom:6px;">"A Mizó Kávézó. Mindig nyitva van."</div>
+            <div style="font-size:12px; color:#6A6A6A; line-height:1.6;">Formátum-teszt: 6 mp pre-roll ✓ · 30 mp TVC ✓ · in-store display ✓ · csomagolás ✓</div>
+          </div>
+          <div style="background:#FAF8FF; border:1px solid #E0D0F8; border-radius:8px; padding:14px 16px;">
+            <div style="font-family:'DM Mono',monospace; font-size:9px; color:#9B7EC8; text-transform:uppercase; margin-bottom:6px;">Big Idea — 2. jelölt</div>
+            <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px; color:#1A1A1A; margin-bottom:6px;">"A Selection worth making."</div>
+            <div style="font-size:12px; color:#6A6A6A; line-height:1.6;">Játszik a brand névvel, sajátítja a választás pillanatát, hízelgi a fogyasztót.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DELIVERABLE 2b: KV + ToV -->
+  <div style="background:#FFFFFF; border-radius:10px; border:1px solid #EAE0D4; box-shadow:0 1px 4px rgba(0,0,0,0.05); margin-bottom:10px; margin-left:28px; overflow:hidden; border-left:3px solid #4A8FD9;">
+    <div onClick="{{ togD2b }}" style="display:flex; align-items:center; padding:16px 22px; cursor:pointer; gap:14px; user-select:none;" style-hover="background:#F8FCFF;">
+      <div style="width:34px; height:34px; border-radius:7px; background:#EEF4FF; border:1px solid #C0D8F8; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px; color:#4A8FD9;">2b</span>
+      </div>
+      <div style="flex:1; min-width:0;">
+        <div style="font-family:'DM Mono',monospace; font-size:9px; color:#4A8FD9; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:3px;">Creative Direction</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px; color:#1A1A1A; letter-spacing:-0.01em;">Campaign Key Visual + Tone of Voice</div>
+      </div>
+      <div data-dchev="d2b" style="font-size:14px; color:#C8C0B8; transition:transform 300ms ease;">↓</div>
+    </div>
+    <div data-dbody="d2b" style="max-height:0; overflow:hidden; transition:max-height 450ms ease;">
+      <div style="border-top:1px solid #F0E8E0; background:#FAFAF6; display:flex; padding:0 22px; overflow-x:auto;">
+        <button data-dtab="d2b-0" onClick="{{ tabD2b_0 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid #4A8FD9; color:#1A1A1A; font-weight:700; cursor:pointer; white-space:nowrap;">💡 Mi ez?</button>
+        <button data-dtab="d2b-2" onClick="{{ tabD2b_2 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid transparent; color:#888; cursor:pointer; white-space:nowrap;">🌍 Példák</button>
+      </div>
+      <div data-dpanel="d2b-0" style="padding:22px 24px;"><p style="font-size:13px; color:#3A3A3A; line-height:1.75; margin:0 0 10px;">Key Visual = az egyetlen hős-kép, ami az egész kampányt lehorgonyozza. Tone of Voice = a brand személyisége írásban és hangban — szóválasztás, mondathossz, humor-szint, formalitás.</p></div>
+
+      <div data-dpanel="d2b-2" style="padding:22px 24px; display:none;">
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px;">
+          <div style="background:#EEF4FF; border-radius:6px; padding:12px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#4A8FD9; text-transform:uppercase; margin-bottom:4px;">NESPRESSO</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">KV: tökéletes csésze, meleg gőz, luxus tálalás. ToV: hozzáértő, aspirációs, soha nem hangos.</div></div>
+          <div style="background:#EEF4FF; border-radius:6px; padding:12px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#4A8FD9; text-transform:uppercase; margin-bottom:4px;">OATLY</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">KV: kézzel rajzolt, szándékosan tökéletlen. ToV: anarchikus, öntudatos, vitatkozik önmagával.</div></div>
+          <div style="background:#EEF4FF; border-radius:6px; padding:12px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#4A8FD9; text-transform:uppercase; margin-bottom:4px;">FEVER-TREE</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">KV: a tökéletes tálalás kontextusban. ToV: képzett, de nem beképzelt.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DELIVERABLE 2c: Tagline -->
+  <div style="background:#FFFFFF; border-radius:10px; border:1px solid #EAE0D4; box-shadow:0 1px 4px rgba(0,0,0,0.05); margin-bottom:10px; margin-left:28px; overflow:hidden; border-left:3px solid #7B68EE;">
+    <div onClick="{{ togD2c }}" style="display:flex; align-items:center; padding:16px 22px; cursor:pointer; gap:14px; user-select:none;" style-hover="background:#FAF8FF;">
+      <div style="width:34px; height:34px; border-radius:7px; background:#F3F0FF; border:1px solid #D0C8F0; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px; color:#7B68EE;">2c</span>
+      </div>
+      <div style="flex:1; min-width:0;">
+        <div style="font-family:'DM Mono',monospace; font-size:9px; color:#7B68EE; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:3px;">Creative Language</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px; color:#1A1A1A; letter-spacing:-0.01em;">Tagline / Slogan</div>
+      </div>
+      <div data-dchev="d2c" style="font-size:14px; color:#C8C0B8; transition:transform 300ms ease;">↓</div>
+    </div>
+    <div data-dbody="d2c" style="max-height:0; overflow:hidden; transition:max-height 450ms ease;">
+      <div style="border-top:1px solid #F0E8E0; background:#FAFAF6; display:flex; padding:0 22px; overflow-x:auto;">
+        <button data-dtab="d2c-0" onClick="{{ tabD2c_0 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid #7B68EE; color:#1A1A1A; font-weight:700; cursor:pointer; white-space:nowrap;">💡 Mi ez?</button>
+        <button data-dtab="d2c-2" onClick="{{ tabD2c_2 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid transparent; color:#888; cursor:pointer; white-space:nowrap;">🌍 Példák</button>
+        <button data-dtab="d2c-3" onClick="{{ tabD2c_3 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid transparent; color:#888; cursor:pointer; white-space:nowrap;">→ DOUPLA válasz</button>
+      </div>
+      <div data-dpanel="d2c-0" style="padding:22px 24px;"><p style="font-size:13px; color:#3A3A3A; line-height:1.75; margin:0;">A brand ígéretének lehető legtömörebb kifejezése — általában 3–7 szó. Csomagoláson, TV-ben, digital footerben, mindenhol. A nagy tagline-ok úgy éreztetik, mintha kizárólag ehhez a brandhez tartozna.</p></div>
+
+      <div data-dpanel="d2c-2" style="padding:22px 24px; display:none;">
+        <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:10px;">
+          <div style="background:#F3F0FF; border-radius:6px; padding:12px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#7B68EE; text-transform:uppercase; margin-bottom:4px;">RED BULL</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">'Gives You Wings' — funkcionálisból metaforikussá. 70+ nyelven működik.</div></div>
+          <div style="background:#F3F0FF; border-radius:6px; padding:12px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#7B68EE; text-transform:uppercase; margin-bottom:4px;">KIT KAT</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">'Have a Break' — egy alkalmat sajátít, nem egy terméktulajdonságot.</div></div>
+          <div style="background:#F3F0FF; border-radius:6px; padding:12px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#7B68EE; text-transform:uppercase; margin-bottom:4px;">CARLSBERG</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">'Probably the Best' — öntudatos alábecsülés = több hitelesség.</div></div>
+          <div style="background:#F3F0FF; border-radius:6px; padding:12px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#7B68EE; text-transform:uppercase; margin-bottom:4px;">NESPRESSO</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">'What Else?' — három szótag, a prémiumság implicit feltételezése.</div></div>
+        </div>
+      </div>
+      <div data-dpanel="d2c-3" style="padding:22px 24px; display:none;">
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="background:#F3F0FF; border:1px solid #D8C8F0; border-radius:8px; padding:14px 16px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;"><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">"A Mizó Kávézó mindig nyitva van."</div><span style="background:#7B68EE; color:#FFFFFF; font-family:'DM Mono',monospace; font-size:9px; padding:3px 8px; border-radius:3px; text-transform:uppercase;">Ajánlott</span></div>
+            <div style="font-size:12px; color:#6060A8; line-height:1.6;">Az "mindig nyitva" implicit versenyzői kijelentés. Semmi más nincs mindig nyitva.</div>
+          </div>
+          <div style="background:#F8F6FF; border:1px solid #E0D8F8; border-radius:8px; padding:14px 16px;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A; margin-bottom:6px;">"Ha nincs időd — Mizó Kávézó."</div>
+            <div style="font-size:12px; color:#6060A8; line-height:1.6;">Rímalapú variáns. Rádiós szpotban, TikTok soundban, podcast szponzorációban a legerősebb.</div>
+          </div>
+          <div style="background:#F8F6FF; border:1px solid #E0D8F8; border-radius:8px; padding:14px 16px;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A; margin-bottom:6px;">"Kávé, végre."</div>
+            <div style="font-size:12px; color:#6060A8; line-height:1.6;">Ultra-rövid. Azt sugallja, hogy minden más valami hiányos volt.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DELIVERABLE 2d: Media Strategy -->
+  <div style="background:#FFFFFF; border-radius:10px; border:1px solid #EAE0D4; box-shadow:0 1px 4px rgba(0,0,0,0.05); margin-bottom:10px; margin-left:28px; overflow:hidden; border-left:3px solid #2AA8A0;">
+    <div onClick="{{ togD2d }}" style="display:flex; align-items:center; padding:16px 22px; cursor:pointer; gap:14px; user-select:none;" style-hover="background:#F8FFFE;">
+      <div style="width:34px; height:34px; border-radius:7px; background:#EEFAF9; border:1px solid #B8E0DC; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px; color:#2AA8A0;">2d</span>
+      </div>
+      <div style="flex:1; min-width:0;">
+        <div style="font-family:'DM Mono',monospace; font-size:9px; color:#2AA8A0; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:3px;">Media Planning</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px; color:#1A1A1A; letter-spacing:-0.01em;">Media Strategy Recommendations</div>
+      </div>
+      <div data-dchev="d2d" style="font-size:14px; color:#C8C0B8; transition:transform 300ms ease;">↓</div>
+    </div>
+    <div data-dbody="d2d" style="max-height:0; overflow:hidden; transition:max-height 450ms ease;">
+      <div style="border-top:1px solid #F0E8E0; background:#FAFAF6; display:flex; padding:0 22px; overflow-x:auto;">
+        <button data-dtab="d2d-0" onClick="{{ tabD2d_0 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid #2AA8A0; color:#1A1A1A; font-weight:700; cursor:pointer; white-space:nowrap;">💡 Mi ez?</button>
+        <button data-dtab="d2d-2" onClick="{{ tabD2d_2 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid transparent; color:#888; cursor:pointer; white-space:nowrap;">🌍 Példák</button>
+        <button data-dtab="d2d-3" onClick="{{ tabD2d_3 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid transparent; color:#888; cursor:pointer; white-space:nowrap;">→ DOUPLA válasz</button>
+      </div>
+      <div data-dpanel="d2d-0" style="padding:22px 24px;"><p style="font-size:13px; color:#3A3A3A; line-height:1.75; margin:0;">HOL fut a kampány, MIÉRT azok a csatornák, és HOGYAN osszuk el a büdzsét — azon alapulva, ahol a célcsoport valóban figyel. A sorrend is benne: előbb awareness, majd konverzió? Vagy egyszerre?</p></div>
+
+      <div data-dpanel="d2d-2" style="padding:22px 24px; display:none;">
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="background:#EEFAF9; border-radius:6px; padding:12px 14px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#2AA8A0; text-transform:uppercase; margin-bottom:4px;">GYMSHARK</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">All-in fitness influencereken mielőtt bárki más (2013). £1Mrd brand egyetlen csatornán.</div></div>
+          <div style="background:#EEFAF9; border-radius:6px; padding:12px 14px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#2AA8A0; text-transform:uppercase; margin-bottom:4px;">SPOTIFY 'Wrapped'</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">Nulla fizetett média, teljesen earned. Stratégia: csinálj olyat, ami annyira személyes, hogy az emberek maguktól megosztják.</div></div>
+        </div>
+      </div>
+      <div data-dpanel="d2d-3" style="padding:22px 24px; display:none;">
+        <div style="background:#EEFAF9; border:1px solid #C0E8E4; border-radius:8px; padding:16px 18px; margin-bottom:14px;">
+          <div style="font-family:'DM Mono',monospace; font-size:9px; color:#2AA8A0; text-transform:uppercase; margin-bottom:8px;">Az első érintkezési pont</div>
+          <p style="font-size:13px; color:#0A3838; line-height:1.7; margin:0;">A Gen Z és Millennials <strong>az eladóhelyen találkozik először</strong> a kávémárkákkal — a convenience bolt hűtőjénél, a benzinkútnál. Látják a terméket, mielőtt látják a kampányt. Az <strong>in-store az #1 touchpoint</strong>, a digital a megerősítés. Ez kellene hogy meghatározza a büdzsé logikáját.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DELIVERABLE 3: TVC -->
+  <div style="background:#FFFFFF; border-radius:10px; border:1px solid #EAE0D4; box-shadow:0 1px 4px rgba(0,0,0,0.05); margin-bottom:10px; overflow:hidden;">
+    <div onClick="{{ togD3 }}" style="display:flex; align-items:center; padding:18px 22px; cursor:pointer; gap:14px; user-select:none;" style-hover="background:#F8FFFC;">
+      <div style="width:34px; height:34px; border-radius:7px; background:#EEFAF9; border:1px solid #B8E8E4; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; color:#2AA8A0;">3</span>
+      </div>
+      <div style="flex:1; min-width:0;">
+        <div style="font-family:'DM Mono',monospace; font-size:9px; color:#2AA8A0; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:3px;">Content Production</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A; letter-spacing:-0.01em;">20 mp Animációs Storyline (TVC)</div>
+      </div>
+      <div data-dchev="d3" style="font-size:14px; color:#C8C0B8; transition:transform 300ms ease;">↓</div>
+    </div>
+    <div data-dbody="d3" style="max-height:0; overflow:hidden; transition:max-height 450ms ease;">
+      <div style="border-top:1px solid #F0E8E0; background:#FAFAF6; display:flex; padding:0 22px; overflow-x:auto;">
+        <button data-dtab="d3-0" onClick="{{ tabD3_0 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid #2AA8A0; color:#1A1A1A; font-weight:700; cursor:pointer; white-space:nowrap;">💡 Mi ez?</button>
+        <button data-dtab="d3-2" onClick="{{ tabD3_2 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid transparent; color:#888; cursor:pointer; white-space:nowrap;">🌍 Példák</button>
+        <button data-dtab="d3-3" onClick="{{ tabD3_3 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid transparent; color:#888; cursor:pointer; white-space:nowrap;">→ DOUPLA válasz</button>
+      </div>
+      <div data-dpanel="d3-0" style="padding:22px 24px;"><p style="font-size:13px; color:#3A3A3A; line-height:1.75; margin:0;">Egy 20 másodpercbe belefért történet — körülbelül 40–50 szó narrációval + vizuális ívvel. Pontosan ennyi fér bele: egy vágy vagy feszültség, egy átalakulás pillanata, egy brand-payoff.</p></div>
+
+      <div data-dpanel="d3-2" style="padding:22px 24px; display:none;">
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="background:#EEFAF9; border-radius:6px; padding:12px 14px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#2AA8A0; text-transform:uppercase; margin-bottom:4px;">LURPAK — 20 mp</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">Makró élelmiszer cinematográfia, egyetlen sor: 'For the love of food.' Nincs történet, csak érzékiség.</div></div>
+          <div style="background:#EEFAF9; border-radius:6px; padding:12px 14px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#2AA8A0; text-transform:uppercase; margin-bottom:4px;">APPLE iPhone</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">Egy feature, szépen bemutatva egy dolog csinálásánál, product + tagline zárással.</div></div>
+        </div>
+      </div>
+      <div data-dpanel="d3-3" style="padding:22px 24px; display:none;">
+        <div style="background:#EEFAF9; border:1px solid #B8E8E4; border-radius:8px; padding:14px 16px; margin-bottom:12px;">
+          <div style="font-family:'DM Mono',monospace; font-size:9px; color:#2AA8A0; text-transform:uppercase; margin-bottom:6px;">Ajánlott megközelítés</div>
+          <div style="font-size:13px; color:#0A3838; font-weight:600; margin-bottom:4px;">Atmoszféra-vezérelt. Karakterek nélkül.</div>
+          <div style="font-size:12px; color:#3A7070; line-height:1.6;">A karakterek az ötletet megöregedtetik és casting/kontinuitási problémákat okoznak. Az atmoszféra időtálló és SKU-k között fordítható.</div>
+        </div>
+        <div style="font-family:'DM Mono',monospace; font-size:9px; color:#888; text-transform:uppercase; margin-bottom:10px;">Storyline A — "The Pause" (Mizó Kávézó verzió)</div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <div style="display:flex; gap:10px; align-items:flex-start; background:#F8FFFC; border-radius:5px; padding:8px 12px;"><span style="font-family:'DM Mono',monospace; font-size:9px; color:#2AA8A0; flex-shrink:0; width:40px;">0–2 mp</span><span style="font-size:12px; color:#3A3A3A;">Fekete. Egy kulcs forog a zárban. Halvánan: "05:47."</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; background:#F8FFFC; border-radius:5px; padding:8px 12px;"><span style="font-family:'DM Mono',monospace; font-size:9px; color:#2AA8A0; flex-shrink:0; width:40px;">2–10 mp</span><span style="font-size:12px; color:#3A3A3A;">Egy kávézóajtó kinyílik — sötét fa, réz fogantyú. Mögötte: reggeli autó belseje. Majd iroda, metró, park. Minden képen 1 másodperc, folyamatos nyitással.</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; background:#F8FFFC; border-radius:5px; padding:8px 12px;"><span style="font-family:'DM Mono',monospace; font-size:9px; color:#2AA8A0; flex-shrink:0; width:40px;">10–15 mp</span><span style="font-size:12px; color:#3A3A3A;">Az utolsó nyitás: ott az az hely, ahol a néző ül. Az asztalon: egy MCS doboz. Üres asztal — az övé.</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; background:#F8FFFC; border-radius:5px; padding:8px 12px;"><span style="font-family:'DM Mono',monospace; font-size:9px; color:#2AA8A0; flex-shrink:0; width:40px;">18–20 mp</span><span style="font-size:12px; color:#3A3A3A;">Fehér betűk feketén: <em>"A Mizó Kávézó mindig nyitva van."</em> Logo.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DELIVERABLE 4: Touchpoints -->
+  <div style="background:#FFFFFF; border-radius:10px; border:1px solid #EAE0D4; box-shadow:0 1px 4px rgba(0,0,0,0.05); margin-bottom:10px; overflow:hidden;">
+    <div onClick="{{ togD4 }}" style="display:flex; align-items:center; padding:18px 22px; cursor:pointer; gap:14px; user-select:none;" style-hover="background:#F8FFF8;">
+      <div style="width:34px; height:34px; border-radius:7px; background:#F0F8F1; border:1px solid #B8E0C0; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; color:#4DAF6B;">4</span>
+      </div>
+      <div style="flex:1; min-width:0;">
+        <div style="font-family:'DM Mono',monospace; font-size:9px; color:#4DAF6B; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:3px;">Campaign Architecture</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A; letter-spacing:-0.01em;">Campaign Across Touchpoints — incl. In-store</div>
+      </div>
+      <div data-dchev="d4" style="font-size:14px; color:#C8C0B8; transition:transform 300ms ease;">↓</div>
+    </div>
+    <div data-dbody="d4" style="max-height:0; overflow:hidden; transition:max-height 450ms ease;">
+      <div style="border-top:1px solid #F0E8E0; background:#FAFAF6; display:flex; padding:0 22px; overflow-x:auto;">
+        <button data-dtab="d4-0" onClick="{{ tabD4_0 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid #4DAF6B; color:#1A1A1A; font-weight:700; cursor:pointer; white-space:nowrap;">💡 Mi ez?</button>
+        <button data-dtab="d4-2" onClick="{{ tabD4_2 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid transparent; color:#888; cursor:pointer; white-space:nowrap;">🌍 Példák</button>
+        <button data-dtab="d4-3" onClick="{{ tabD4_3 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid transparent; color:#888; cursor:pointer; white-space:nowrap;">→ DOUPLA válasz</button>
+      </div>
+      <div data-dpanel="d4-0" style="padding:22px 24px;"><p style="font-size:13px; color:#3A3A3A; line-height:1.75; margin:0;">Hogyan fordítódik le a Big Idea minden pillanatra, ahol a fogyasztó találkozik a branddel — polctól a scrolloló feedig a benzinkút hűtőszekrényéig. Az in-store azért van kiemelve, mert az FMCG brandek az eladóhelyen élnek és halnak.</p></div>
+
+      <div data-dpanel="d4-2" style="padding:22px 24px; display:none;">
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="background:#F0F8F1; border-radius:6px; padding:12px 14px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#4DAF6B; text-transform:uppercase; margin-bottom:4px;">INNOCENT 'Big Knit'</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">In-store: kötött sapkák palackokon (gyűjthető, megosztható). Online: szavazós mechanic. PR: jótékonysági sztori. Egy ötlet, teljes integráció.</div></div>
+          <div style="background:#F0F8F1; border-radius:6px; padding:12px 14px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#4DAF6B; text-transform:uppercase; margin-bottom:4px;">COCA-COLA 'Share a Coke'</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">Névreszólóan személyre szabott palack, automata, TV, OOH, social. A touchpoint térkép MAGA volt az ötlet.</div></div>
+        </div>
+      </div>
+      <div data-dpanel="d4-3" style="padding:22px 24px; display:none;">
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:12px;">
+          <div style="background:#F0F8F1; border-radius:6px; padding:12px; text-align:center;">
+            <div style="font-size:22px; margin-bottom:6px;">👁</div>
+            <div style="font-family:'DM Mono',monospace; font-size:9px; color:#4DAF6B; text-transform:uppercase; margin-bottom:4px;">3 méterre</div>
+            <div style="font-size:11px; color:#4A6050; line-height:1.5;">SKU-k "szivárványblokkot" alkotnak a polcon. Együtt erősebbek, mint egyenként.</div>
+          </div>
+          <div style="background:#F0F8F1; border-radius:6px; padding:12px; text-align:center;">
+            <div style="font-size:22px; margin-bottom:6px;">✋</div>
+            <div style="font-family:'DM Mono',monospace; font-size:9px; color:#4DAF6B; text-transform:uppercase; margin-bottom:4px;">Kéznyújtásnyira</div>
+            <div style="font-size:11px; color:#4A6050; line-height:1.5;">A Coffee Selection szóvédjegy tisztán olvasható. A flavor clearly megkülönböztetett.</div>
+          </div>
+          <div style="background:#F0F8F1; border-radius:6px; padding:12px; text-align:center;">
+            <div style="font-size:22px; margin-bottom:6px;">📦</div>
+            <div style="font-family:'DM Mono',monospace; font-size:9px; color:#4DAF6B; text-transform:uppercase; margin-bottom:4px;">Kézben</div>
+            <div style="font-size:11px; color:#4A6050; line-height:1.5;">A Mizó Kávézó élmény elindítói: QR kód, "Nyitva" felirat, foglalási mechanic.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DELIVERABLE 5: Viral -->
+  <div style="background:#FFFFFF; border-radius:10px; border:1px solid #EAE0D4; box-shadow:0 1px 4px rgba(0,0,0,0.05); margin-bottom:10px; overflow:hidden;">
+    <div onClick="{{ togD5 }}" style="display:flex; align-items:center; padding:18px 22px; cursor:pointer; gap:14px; user-select:none;" style-hover="background:#FFF8F8;">
+      <div style="width:34px; height:34px; border-radius:7px; background:#FFF0EE; border:1px solid #F8C8C0; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; color:#E05858;">5</span>
+      </div>
+      <div style="flex:1; min-width:0;">
+        <div style="font-family:'DM Mono',monospace; font-size:9px; color:#E05858; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:3px;">Activation + PR</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A; letter-spacing:-0.01em;">Consumer Engagement Ideas With Viral Potential</div>
+      </div>
+      <div data-dchev="d5" style="font-size:14px; color:#C8C0B8; transition:transform 300ms ease;">↓</div>
+    </div>
+    <div data-dbody="d5" style="max-height:0; overflow:hidden; transition:max-height 450ms ease;">
+      <div style="border-top:1px solid #F0E8E0; background:#FAFAF6; display:flex; padding:0 22px; overflow-x:auto;">
+        <button data-dtab="d5-0" onClick="{{ tabD5_0 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid #E05858; color:#1A1A1A; font-weight:700; cursor:pointer; white-space:nowrap;">💡 Mi ez?</button>
+        <button data-dtab="d5-2" onClick="{{ tabD5_2 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid transparent; color:#888; cursor:pointer; white-space:nowrap;">🌍 Példák</button>
+        <button data-dtab="d5-3" onClick="{{ tabD5_3 }}" style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:10px 14px; background:none; border:none; border-bottom:2px solid transparent; color:#888; cursor:pointer; white-space:nowrap;">→ DOUPLA válasz</button>
+      </div>
+      <div data-dpanel="d5-0" style="padding:22px 24px;"><p style="font-size:13px; color:#3A3A3A; line-height:1.75; margin:0;">Ahol a brand abbahagyja a műsorsugárzást és olyasmit teremt, amiben az emberek aktívan részt akarnak venni, megosztani akarnak, vagy amiről beszélnek. A virális nem formátum — mellékterméke egy ötletnek, ami okot ad az embereknek továbbadni.</p></div>
+
+      <div data-dpanel="d5-2" style="padding:22px 24px; display:none;">
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="background:#FFF0EE; border-radius:6px; padding:12px 14px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#E05858; text-transform:uppercase; margin-bottom:4px;">COCA-COLA 'Share a Coke'</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">Személyre szabott névpalackok, 998M organikus impresszió. Mechanic: személyre szabás + szűkösség.</div></div>
+          <div style="background:#FFF0EE; border-radius:6px; padding:12px 14px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#E05858; text-transform:uppercase; margin-bottom:4px;">HEINZ 'Draw Ketchup'</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">Megkérte az embereket, hogy rajzoljanak ketchupot — 100%-ban Heinzt rajzoltak. Nulla médiaköltés. Egyetlen poszt, ami bizonyított egy brand-állítást anélkül, hogy kimondta volna.</div></div>
+        </div>
+      </div>
+      <div data-dpanel="d5-3" style="padding:22px 24px; display:none;">
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="background:#FFF0EE; border:1px solid #F8C8C0; border-radius:8px; padding:14px 16px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#E05858; text-transform:uppercase;">Koncepció 1</div><span style="background:#E05858; color:#FFFFFF; font-family:'DM Mono',monospace; font-size:9px; padding:2px 8px; border-radius:3px; text-transform:uppercase;">Ajánlott</span></div>
+            <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px; color:#1A1A1A; margin-bottom:6px;">"Foglalj asztalt a Mizó Kávézóban"</div>
+            <div style="font-size:12px; color:#6A3A3A; line-height:1.6; margin-bottom:8px;">AI landing page + generált foglalási kártya. Virális loop: generált kép → social megosztás → QR → új foglalás.</div>
+            <div style="background:#FFF8F8; border-radius:5px; padding:10px 12px; font-family:'DM Mono',monospace; font-size:11px; color:#4A2020; line-height:1.6;">"Lőrinc Attila részére az 'Autó Hátsó Ülés — 07:43 asztal' fenntartva szerdán."</div>
+          </div>
+          <div style="background:#FFF8F8; border:1px solid #F0D8D8; border-radius:8px; padding:14px 16px;">
+            <div style="font-family:'DM Mono',monospace; font-size:9px; color:#E05858; text-transform:uppercase; margin-bottom:6px;">Koncepció 2</div>
+            <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px; color:#1A1A1A; margin-bottom:6px;">"Melyik Coffee Selection vagy te?"</div>
+            <div style="font-size:12px; color:#6A3A3A; line-height:1.6;">60 másodperces kvíz (IG Stories / microsite) szellemes kérdésekkel. Eredmény: 9 SKU közül egyik a kávé-személyiséged — megosztható vizuális kártyával.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Colour guide -->
+  <div style="background:#F8F4EE; border-radius:8px; padding:14px 18px; margin-top:8px;">
+    <div style="font-family:'DM Mono',monospace; font-size:9px; color:#A09880; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:8px;">Táblázat színjelzés — eredeti excel</div>
+    <div style="display:flex; flex-wrap:wrap; gap:10px;">
+      <div style="display:flex; align-items:center; gap:6px;"><div style="width:12px; height:12px; background:#F5F0E8; border:1px solid #D0C8BC; border-radius:2px;"></div><span style="font-size:11px; color:#6A6A6A;">D–E oszlop: magyarázat és output</span></div>
+      <div style="display:flex; align-items:center; gap:6px;"><div style="width:12px; height:12px; background:#FBD88C; border-radius:2px;"></div><span style="font-size:11px; color:#6A6A6A;">F oszlop: valós példák (borostyán)</span></div>
+      <div style="display:flex; align-items:center; gap:6px;"><div style="width:12px; height:12px; background:#98D898; border-radius:2px;"></div><span style="font-size:11px; color:#6A6A6A;">G oszlop: stratégiai kérdések (zöld)</span></div>
+      <div style="display:flex; align-items:center; gap:6px;"><div style="width:12px; height:12px; background:#A8C8F0; border-radius:2px;"></div><span style="font-size:11px; color:#6A6A6A;">H oszlop: DOUPLA válaszok (kék)</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<div style="max-width:1040px; margin:0 auto; padding:12px 28px 28px; text-align:center;">
+  <span style="font-family:'DM Mono',monospace; font-size:9px; color:#C0B8B0; letter-spacing:0.12em; text-transform:uppercase;">DOUPLA Creative &amp; Digital · MCS2026 Agency Deliverables v2 · Bizalmasan kezelendő</span>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { open: {}, tabs: {} };
+
+  toggle(id) {
+    const cur = this.state.open[id];
+    this.setState(s => ({ open: { ...s.open, [id]: !cur } }));
+  }
+
+  setTab(id, tab) {
+    this.setState(s => ({ tabs: { ...s.tabs, [id]: tab } }));
+  }
+
+  componentDidMount() { this.applyState(); }
+  componentDidUpdate() { this.applyState(); }
+
+  applyState() {
+    const { open, tabs } = this.state;
+    document.querySelectorAll('[data-dbody]').forEach(el => {
+      const id = el.getAttribute('data-dbody');
+      el.style.maxHeight = open[id] ? '1400px' : '0';
+      el.style.transition = 'max-height 420ms ease';
+    });
+    document.querySelectorAll('[data-dchev]').forEach(el => {
+      const id = el.getAttribute('data-dchev');
+      el.style.transform = open[id] ? 'rotate(180deg)' : 'rotate(0deg)';
+      el.style.transition = 'transform 300ms ease';
+    });
+    document.querySelectorAll('[data-dpanel]').forEach(el => {
+      const parts = el.getAttribute('data-dpanel').split('-');
+      const id = parts.slice(0, -1).join('-');
+      const tabIdx = parseInt(parts[parts.length - 1]);
+      const activeTab = tabs[id] !== undefined ? tabs[id] : 0;
+      el.style.display = tabIdx === activeTab ? 'block' : 'none';
+    });
+    document.querySelectorAll('[data-dtab]').forEach(el => {
+      const parts = el.getAttribute('data-dtab').split('-');
+      const id = parts.slice(0, -1).join('-');
+      const tabIdx = parseInt(parts[parts.length - 1]);
+      const activeTab = tabs[id] !== undefined ? tabs[id] : 0;
+      const isActive = tabIdx === activeTab;
+      // Get color from parent accordion
+      const colors = { d1:'#C8A96A', d2:'#D4894A', d2a:'#9B7EC8', d2b:'#4A8FD9', d2c:'#7B68EE', d2d:'#2AA8A0', d3:'#2AA8A0', d4:'#4DAF6B', d5:'#E05858' };
+      const color = colors[id] || '#C8A96A';
+      el.style.borderBottom = isActive ? `2px solid ${color}` : '2px solid transparent';
+      el.style.color = isActive ? '#1A1A1A' : '#888';
+      el.style.fontWeight = isActive ? '700' : '400';
+    });
+  }
+
+  renderVals() {
+    const t = id => () => this.toggle(id);
+    const s = (id, tab) => () => this.setTab(id, tab);
+    return {
+      togD1: t('d1'), togD2: t('d2'), togD2a: t('d2a'), togD2b: t('d2b'),
+      togD2c: t('d2c'), togD2d: t('d2d'), togD3: t('d3'), togD4: t('d4'), togD5: t('d5'),
+      tabD1_0: s('d1',0), tabD1_1: s('d1',1), tabD1_2: s('d1',2), tabD1_3: s('d1',3),
+      tabD2_0: s('d2',0), tabD2_1: s('d2',1), tabD2_2: s('d2',2), tabD2_3: s('d2',3),
+      tabD2a_0: s('d2a',0), tabD2a_1: s('d2a',1), tabD2a_2: s('d2a',2), tabD2a_3: s('d2a',3),
+      tabD2b_0: s('d2b',0), tabD2b_1: s('d2b',1), tabD2b_2: s('d2b',2),
+      tabD2c_0: s('d2c',0), tabD2c_1: s('d2c',1), tabD2c_2: s('d2c',2), tabD2c_3: s('d2c',3),
+      tabD2d_0: s('d2d',0), tabD2d_1: s('d2d',1), tabD2d_2: s('d2d',2), tabD2d_3: s('d2d',3),
+      tabD3_0: s('d3',0), tabD3_1: s('d3',1), tabD3_2: s('d3',2), tabD3_3: s('d3',3),
+      tabD4_0: s('d4',0), tabD4_1: s('d4',1), tabD4_2: s('d4',2), tabD4_3: s('d4',3),
+      tabD5_0: s('d5',0), tabD5_1: s('d5',1), tabD5_2: s('d5',2), tabD5_3: s('d5',3),
+    };
+  }
+}
+</script>
+</body>
+</html>

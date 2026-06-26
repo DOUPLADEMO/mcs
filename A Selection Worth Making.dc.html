@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #F0EAE0; font-family: 'DM Sans', sans-serif; color: #1A1A1A; }
+  ::-webkit-scrollbar { width: 5px; } ::-webkit-scrollbar-track { background: #F0EAE0; } ::-webkit-scrollbar-thumb { background: #D0C8BC; border-radius: 3px; }
+  @media (max-width: 860px) { #swmlay { flex-direction: column !important; } #swmnav { position: static !important; width: auto !important; } }
+</style>
+</helmet>
+
+<!-- HERO — warm cream editorial -->
+<div style="background:#FAF5EE; border-bottom:1px solid #E8D8C8; padding:48px 36px 40px; position:relative; overflow:hidden;">
+  <div style="max-width:1080px; margin:0 auto;">
+    <div style="font-family:'DM Mono',monospace; font-size:10px; color:#A09080; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:20px;">DOUPLA Creative &amp; Digital · MCS2026 · Confidential</div>
+    <div style="display:flex; align-items:flex-start; gap:40px; flex-wrap:wrap;">
+      <div style="flex:1; min-width:280px;">
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(32px,5vw,58px); color:#1C1008; letter-spacing:-0.03em; line-height:1.05; margin-bottom:16px;">Mizo Coffee<br>Selection</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:clamp(18px,2.5vw,26px); color:#7B4A2A; font-style:italic; margin-bottom:20px; font-weight:400;">A Selection Worth Making.</div>
+        <p style="font-size:14px; color:#6A5A48; line-height:1.7; max-width:540px; margin:0 0 20px;">2026 Relaunch — Full Campaign Development. The act of choosing has become rare. Mizo Coffee Selection occupies the opposite position: the coffee you chose, not the one you grabbed.</p>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <span style="background:#F0E4D4; border:1px solid #D8C4A8; border-radius:20px; padding:5px 13px; font-family:'DM Mono',monospace; font-size:10px; color:#7B4A2A; text-transform:uppercase; letter-spacing:0.1em;">Gifting mechanic</span>
+          <span style="background:#F0E4D4; border:1px solid #D8C4A8; border-radius:20px; padding:5px 13px; font-family:'DM Mono',monospace; font-size:10px; color:#7B4A2A; text-transform:uppercase; letter-spacing:0.1em;">Selection moment</span>
+          <span style="background:#F0E4D4; border:1px solid #D8C4A8; border-radius:20px; padding:5px 13px; font-family:'DM Mono',monospace; font-size:10px; color:#7B4A2A; text-transform:uppercase; letter-spacing:0.1em;">8 sections</span>
+        </div>
+      </div>
+      <div style="background:#1C1008; border-radius:10px; padding:20px 24px; min-width:220px; max-width:300px;">
+        <div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; letter-spacing:0.12em; margin-bottom:12px;">OBI — One Brief Idea</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:700; color:#F0E4CC; line-height:1.4; margin-bottom:10px;">"The right coffee isn't the one you grab. It's the one you pick."</div>
+        <div style="width:100%; height:1px; background:rgba(184,151,90,0.2); margin-bottom:10px;"></div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:13px; color:#B8975A; font-style:italic;">Coffee for people who still bother to choose.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="swmlay" style="max-width:1080px; margin:0 auto; display:flex; gap:20px; padding:22px 18px; align-items:flex-start;">
+
+  <!-- SIDEBAR -->
+  <div id="swmnav" style="width:182px; flex-shrink:0; position:sticky; top:14px;">
+    <div style="background:#FFF; border-radius:10px; padding:12px; box-shadow:0 1px 4px rgba(0,0,0,0.07);">
+      <div style="font-family:'DM Mono',monospace; font-size:8px; color:#A09880; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:8px; padding-bottom:6px; border-bottom:1px solid #F0E8E0;">Tartalom</div>
+      <div style="display:flex; flex-direction:column; gap:1px;">
+        <button onClick="{{ togS1 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#7B4A2A; margin-right:4px;">01</span>Brand Essence</button>
+        <button onClick="{{ togS2 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#7B4A2A; margin-right:4px;">02</span>Big Idea</button>
+        <button onClick="{{ togS3 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#7B4A2A; margin-right:4px;">03</span>KV + ToV</button>
+        <button onClick="{{ togS4 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#7B4A2A; margin-right:4px;">04</span>Tagline</button>
+        <button onClick="{{ togS5 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#7B4A2A; margin-right:4px;">05</span>Media Strategy</button>
+        <button onClick="{{ togS6 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#7B4A2A; margin-right:4px;">06</span>Animation / TVC</button>
+        <button onClick="{{ togS7 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#7B4A2A; margin-right:4px;">07</span>Touchpoints</button>
+        <button onClick="{{ togS8 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#7B4A2A; margin-right:4px;">08</span>Viral / Engagement</button>
+        <div style="margin-top:6px; padding-top:6px; border-top:1px solid #F0E8E0; display:flex; gap:4px;">
+          <button onClick="{{ expandAll }}" style="flex:1; background:none; border:1px solid #D8C4A8; border-radius:4px; padding:5px; cursor:pointer; font-family:'DM Mono',monospace; font-size:8px; color:#7B4A2A; text-transform:uppercase;" style-hover="background:#F5EDD8;">▸ Mind</button>
+          <button onClick="{{ collapseAll }}" style="flex:1; background:none; border:1px solid #DDD0C8; border-radius:4px; padding:5px; cursor:pointer; font-family:'DM Mono',monospace; font-size:8px; color:#A09880; text-transform:uppercase;" style-hover="background:#F8F4EE;">▾ Zár</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTIONS -->
+  <div style="flex:1; min-width:0; display:flex; flex-direction:column; gap:5px;">
+
+    <!-- S1: BRAND ESSENCE -->
+    <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div onClick="{{ togS1 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #7B4A2A;" style-hover="background:#FDFAF6;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#7B4A2A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">01 — Brand Essence + OBI</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">Coffee for people who still bother to choose.</div></div>
+        <div data-swmchev="s1" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-swmbody="s1" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
+          <div style="background:#F8F2EC; border-radius:7px; padding:12px 16px; margin-bottom:14px; border-left:3px solid #7B4A2A;">
+            <div style="font-family:'DM Mono',monospace; font-size:8px; color:#7B4A2A; text-transform:uppercase; margin-bottom:6px;">Brand Essence</div>
+            <p style="font-size:13px; color:#4A3020; line-height:1.7; margin:0 0 8px;">The act of choosing has become rare. Most purchase decisions aren't decisions at all — they're habits, defaults, the thing in front of you. Mizo Coffee Selection occupies the opposite position: a curated range built on the premise that the act of selecting matters.</p>
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:700; color:#1C1008; font-style:italic;">Not just what you drink, but what you give. What you leave on someone's desk. What you pick up when you're already there.</div>
+          </div>
+          <div style="background:#1C1008; border-radius:7px; padding:12px 16px; margin-bottom:14px;">
+            <div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; margin-bottom:6px;">OBI — One Brief Idea</div>
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:700; color:#F0E4CC;">"The right coffee isn't the one you grab. It's the one you pick."</div>
+            <div style="font-size:12px; color:#907050; margin-top:6px; line-height:1.55;">The word 'still' in the brand essence is doing real work — it positions deliberate choosing against convenience-first autopilot. Without being preachy about it.</div>
+          </div>
+          <div style="font-family:'DM Mono',monospace; font-size:8px; color:#A09080; text-transform:uppercase; margin-bottom:8px; letter-spacing:0.1em;">Brand Values</div>
+          <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:6px;">
+            <div style="background:#F8F2EC; border-radius:5px; padding:9px 12px;"><div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:2px;">Consideration</div><div style="font-size:11px; color:#6A5A48;">Deliberate, not impulsive</div></div>
+            <div style="background:#F8F2EC; border-radius:5px; padding:9px 12px;"><div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:2px;">Warmth</div><div style="font-size:11px; color:#6A5A48;">Connecting people, not just delivering caffeine</div></div>
+            <div style="background:#F8F2EC; border-radius:5px; padding:9px 12px;"><div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:2px;">Quiet confidence</div><div style="font-size:11px; color:#6A5A48;">Premium without performance or pretension</div></div>
+            <div style="background:#F8F2EC; border-radius:5px; padding:9px 12px;"><div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:2px;">Accessibility</div><div style="font-size:11px; color:#6A5A48;">Everyday moments, elevated</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; font-family:'DM Mono',monospace; font-size:9px; color:#B8975A; opacity:0.4; letter-spacing:0.08em;">↓ the brand idea becomes the campaign</div>
+
+    <!-- S2: BIG IDEA -->
+    <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div onClick="{{ togS2 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #C8763A;" style-hover="background:#FFFAF6;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#C8763A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">02 — Big Idea</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">The Pause Before You Pick.</div></div>
+        <div data-swmchev="s2" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-swmbody="s2" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
+          <div style="background:#FFF6F0; border-radius:7px; padding:12px 16px; margin-bottom:14px; border-left:3px solid #C8763A;">
+            <div style="font-family:'DM Mono',monospace; font-size:8px; color:#C8763A; text-transform:uppercase; margin-bottom:5px;">Campaign Essence</div>
+            <p style="font-size:13px; color:#5A3820; line-height:1.7; margin:0;">Built around moments of deliberate choice. Small, low-stakes, quietly meaningful. Not dramatic decisions — the everyday ones. Which blend to open this morning. Which pack to slip into a colleague's bag. Which coffee to leave on a friend's desk after a hard week.</p>
+          </div>
+          <div style="background:#FFF6F0; border-radius:7px; padding:12px 16px; margin-bottom:14px; border-left:3px solid #C8763A;">
+            <div style="font-family:'DM Mono',monospace; font-size:8px; color:#C8763A; text-transform:uppercase; margin-bottom:5px;">Creative Concept</div>
+            <p style="font-size:13px; color:#5A3820; line-height:1.7; margin:0 0 6px;">Every execution captures the moment just before a selection is made. A hand hovering over options. A slight consideration. The decision landed on. Then the outcome — not a grand scene, just a quiet satisfaction. Or a colleague's face when they find something waiting.</p>
+          </div>
+          <div style="background:#1C1008; border-radius:7px; padding:14px 16px;">
+            <div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; margin-bottom:8px;">The Gifting Dimension — Small gesture. Deliberate choice.</div>
+            <p style="font-size:13px; color:#C8A888; line-height:1.7; margin:0 0 8px;">The most personal gift isn't expensive — it's selected. When you give someone Mizo Coffee Selection, the message is: <em>I thought about what you'd like, and I picked this.</em> No occasion required. No bow. The choosing is the point.</p>
+            <p style="font-size:13px; color:#907060; line-height:1.7; margin:0;">The gifting mechanic captures the specific warmth of spontaneous consideration. Not a birthday gift. The extra scarf someone brought because it got cold. The coffee left on your desk because a colleague was already at the machine and thought of you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; font-family:'DM Mono',monospace; font-size:9px; color:#B8975A; opacity:0.4; letter-spacing:0.08em;">↓ the idea finds its visual language</div>
+
+    <!-- S3: KV + TOV -->
+    <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div onClick="{{ togS3 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #9B6A3A;" style-hover="background:#FDFAF6;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#9B6A3A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">03 — Key Visual + Tone of Voice</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">Warm without sentiment. Direct without coldness.</div></div>
+        <div data-swmchev="s3" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-swmbody="s3" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
+          <div style="font-family:'DM Mono',monospace; font-size:8px; color:#9B6A3A; text-transform:uppercase; margin-bottom:8px; letter-spacing:0.1em;">Key Visuals</div>
+          <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:14px;">
+            <div style="display:flex; gap:10px; background:#F8F2EC; border-radius:6px; padding:10px 12px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#9B6A3A; flex-shrink:0; width:28px; padding-top:2px;">KV1</span><div><div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:2px;">Primary — The Selection Moment</div><div style="font-size:12px; color:#6A5040; line-height:1.55;">A hand, mid-reach, between two or three packs. Background: warm, lived-in — kitchen counter, desk, bag on a chair. The selection hasn't been made yet. The visual holds that moment of deliberation.</div></div></div>
+            <div style="display:flex; gap:10px; background:#F8F2EC; border-radius:6px; padding:10px 12px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#9B6A3A; flex-shrink:0; width:28px; padding-top:2px;">KV2</span><div><div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:2px;">Gifting Thread</div><div style="font-size:12px; color:#6A5040; line-height:1.55;">A Mizo pack placed on a colleague's desk, seen from above. No bow. No gift tag. Just there. The desk carries evidence of someone's day: notepad, phone, used mug. The coffee wasn't there before. Now it is.</div></div></div>
+          </div>
+          <div style="font-family:'DM Mono',monospace; font-size:8px; color:#9B6A3A; text-transform:uppercase; margin-bottom:8px; letter-spacing:0.1em;">Tone of Voice</div>
+          <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:6px; margin-bottom:10px;">
+            <div style="background:#F8F2EC; border-radius:6px; padding:10px 12px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#5A8040; text-transform:uppercase; margin-bottom:4px;">The voice IS</div><div style="font-size:12px; color:#3A4A30; line-height:1.65;">Warm without sentiment. Direct without coldness. Speaks to adults who know what they want and don't need to perform that knowledge.</div></div>
+            <div style="background:#FFF0EE; border-radius:6px; padding:10px 12px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#C04040; text-transform:uppercase; margin-bottom:4px;">Avoid</div><div style="font-size:12px; color:#602020; line-height:1.65;">Aspirational overreach. Folksy underplaying. Heavy ceremony around the gifting gesture. It should be light, slightly wry.</div></div>
+          </div>
+          <div style="background:#1C1008; border-radius:6px; padding:10px 14px;">
+            <div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; margin-bottom:4px;">Voice Reference</div>
+            <div style="font-size:13px; color:#D4B898; font-style:italic; line-height:1.6;">"The person who hands you a coffee and says 'I got you one, I remembered how you take it' — then moves on. No ceremony. No explanation. Just the gesture."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S4: TAGLINE -->
+    <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div onClick="{{ togS4 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #B8975A;" style-hover="background:#FDFAF6;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#B8975A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">04 — Tagline / Slogan</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">A Selection Worth Making.</div></div>
+        <div data-swmchev="s4" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-swmbody="s4" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
+          <div style="background:#1C1008; border-radius:7px; padding:14px 18px; margin-bottom:14px; text-align:center;">
+            <div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; margin-bottom:8px;">Primary Tagline</div>
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:22px; font-weight:700; color:#F0E4CC; letter-spacing:-0.02em;">A Selection Worth Making.</div>
+            <div style="font-size:12px; color:#907050; margin-top:8px; line-height:1.55;">Works on two semantic levels simultaneously: the product range is worth selecting, and the act of making a selection is itself worthwhile. This double meaning is the campaign's core.</div>
+          </div>
+          <div style="font-family:'DM Mono',monospace; font-size:8px; color:#A09080; text-transform:uppercase; margin-bottom:8px; letter-spacing:0.1em;">Variant Usage</div>
+          <div style="display:flex; flex-direction:column; gap:4px;">
+            <div style="display:flex; align-items:center; gap:10px; padding:8px 12px; background:#F8F2EC; border-radius:4px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; width:160px; flex-shrink:0; text-transform:uppercase;">In-store / packaging</span><span style="font-size:13px; color:#1A1A1A;">"For you. Or for someone."</span></div>
+            <div style="display:flex; align-items:center; gap:10px; padding:8px 12px; background:#F8F2EC; border-radius:4px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; width:160px; flex-shrink:0; text-transform:uppercase;">Gifting activation</span><span style="font-size:13px; color:#1A1A1A;">"Pick one. Make someone's day."</span></div>
+            <div style="display:flex; align-items:center; gap:10px; padding:8px 12px; background:#F8F2EC; border-radius:4px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; width:160px; flex-shrink:0; text-transform:uppercase;">Digital long-format</span><span style="font-size:13px; color:#1A1A1A;">"The coffee you chose, not the one you grabbed."</span></div>
+            <div style="display:flex; align-items:center; gap:10px; padding:8px 12px; background:#F8F2EC; border-radius:4px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; width:160px; flex-shrink:0; text-transform:uppercase;">Gifting — for the gifter</span><span style="font-size:13px; color:#1A1A1A;">"You know what they'd pick."</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S5: MEDIA STRATEGY -->
+    <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div onClick="{{ togS5 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #2AA8A0;" style-hover="background:#F8FFFC;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#2AA8A0; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">05 — Media Strategy</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">2 phases · deliberate, not loud.</div></div>
+        <div data-swmchev="s5" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-swmbody="s5" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
+          <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:14px;">
+            <div style="background:#EEFAF9; border-radius:7px; padding:12px 14px; border-left:3px solid #2AA8A0;">
+              <div style="font-family:'DM Mono',monospace; font-size:8px; color:#2AA8A0; text-transform:uppercase; margin-bottom:5px;">Phase 1 — Relaunch + Positioning (Weeks 1–4)</div>
+              <p style="font-size:13px; color:#3A7070; line-height:1.65; margin:0;">TVC and pre-roll (15" and 30") establish the 'pause before you pick' visual language with widest reach. OOH in high-footfall retail — supermarket entrances, transport hubs. The media approach mirrors the brand: deliberate, not loud. The brand re-enters the market calmly.</p>
+            </div>
+            <div style="background:#EEFAF9; border-radius:7px; padding:12px 14px; border-left:3px solid #4ABAB2;">
+              <div style="font-family:'DM Mono',monospace; font-size:8px; color:#4ABAB2; text-transform:uppercase; margin-bottom:5px;">Phase 2 — Gifting Activation (Weeks 3–8, overlapping)</div>
+              <p style="font-size:13px; color:#3A7070; line-height:1.65; margin:0;">In-store display at the point of decision — coffee aisle and checkout impulse zone. Meta + TikTok targeting reaches gifting moments: back-to-office season, autumn shift. Micro-influencer layer: real people, small followings, actual gifts. Not haul content — one coffee, one desk, one genuine moment.</p>
+            </div>
+          </div>
+          <div style="font-family:'DM Mono',monospace; font-size:8px; color:#2AA8A0; text-transform:uppercase; margin-bottom:8px; letter-spacing:0.1em;">Channel Priorities</div>
+          <div style="display:flex; flex-direction:column; gap:4px; margin-bottom:10px;">
+            <div style="display:flex; gap:10px; padding:7px 10px; background:#F0FAF9; border-radius:4px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#2AA8A0; width:150px; flex-shrink:0; text-transform:uppercase;">TV / VOD</span><span style="font-size:12px; color:#3A5050;">Brand anchor, broad reach — establishes the visual language</span></div>
+            <div style="display:flex; gap:10px; padding:7px 10px; background:#F0FAF9; border-radius:4px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#2AA8A0; width:150px; flex-shrink:0; text-transform:uppercase;">In-store</span><span style="font-size:12px; color:#3A5050;">The actual moment of selection — critical for a supermarket pick-up product</span></div>
+            <div style="display:flex; gap:10px; padding:7px 10px; background:#F0FAF9; border-radius:4px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#2AA8A0; width:150px; flex-shrink:0; text-transform:uppercase;">Social — Meta / TikTok</span><span style="font-size:12px; color:#3A5050;">Gifting mechanic, earned and organic amplification</span></div>
+            <div style="display:flex; gap:10px; padding:7px 10px; background:#F0FAF9; border-radius:4px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#2AA8A0; width:150px; flex-shrink:0; text-transform:uppercase;">OOH</span><span style="font-size:12px; color:#3A5050;">Near-retail tactical. Warm, considered creative.</span></div>
+          </div>
+          <div style="background:#FFF0EE; border-radius:5px; padding:9px 12px; border-left:2px solid #E05858;">
+            <div style="font-family:'DM Mono',monospace; font-size:8px; color:#E05858; text-transform:uppercase; margin-bottom:3px;">What to avoid</div>
+            <div style="font-size:12px; color:#602020; line-height:1.55;">Fragrance-style aspirational placement. Heavy influencer gift PR defeats the intimacy. The media strategy should feel as considered as the brand promise.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S6: ANIMATION / TVC -->
+    <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div onClick="{{ togS6 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #4DAF6B;" style-hover="background:#F8FFF8;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#4DAF6B; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">06 — 20-Second Animation</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">"The Extra One"</div></div>
+        <div data-swmchev="s6" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-swmbody="s6" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
+          <div style="display:flex; flex-direction:column; gap:5px; margin-bottom:12px;">
+            <div style="display:flex; gap:10px; background:#F0F8F1; border-radius:5px; padding:9px 12px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#4DAF6B; flex-shrink:0; width:44px; padding-top:2px;">0–3 sec</span><span style="font-size:12px; color:#3A3A3A; line-height:1.55;">A kitchen. Morning light. A person opens a Mizo Coffee Selection box. They pick two capsules. One for themselves. A second they almost put back — then don't.</span></div>
+            <div style="display:flex; gap:10px; background:#F0F8F1; border-radius:5px; padding:9px 12px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#4DAF6B; flex-shrink:0; width:44px; padding-top:2px;">3–8 sec</span><span style="font-size:12px; color:#3A3A3A; line-height:1.55;">Quick cut. Office corridor. The extra capsule is placed on a colleague's desk without a word. The colleague hasn't arrived yet.</span></div>
+            <div style="display:flex; gap:10px; background:#F0F8F1; border-radius:5px; padding:9px 12px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#4DAF6B; flex-shrink:0; width:44px; padding-top:2px;">8–14 sec</span><span style="font-size:12px; color:#3A3A3A; line-height:1.55;">The colleague arrives. Sees it. Looks across the room. The first person is already at their screen, coffee in hand — not making a thing of it.</span></div>
+            <div style="display:flex; gap:10px; background:#F0F8F1; border-radius:5px; padding:9px 12px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#4DAF6B; flex-shrink:0; width:44px; padding-top:2px;">14–18 sec</span><span style="font-size:12px; color:#3A3A3A; line-height:1.55;">The colleague makes their coffee. A small smile. No dialogue. No musical swell.</span></div>
+            <div style="display:flex; gap:10px; background:#E8F8EC; border-radius:5px; padding:9px 12px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#4DAF6B; flex-shrink:0; width:44px; padding-top:2px;">18–20 sec</span><span style="font-size:12px; color:#1A1A1A; font-weight:600; line-height:1.55;">Mizo Coffee Selection pack. Tagline: <em>A Selection Worth Making.</em></span></div>
+          </div>
+          <div style="background:#F8F2EC; border-radius:6px; padding:10px 13px;">
+            <div style="font-family:'DM Mono',monospace; font-size:8px; color:#9B6A3A; text-transform:uppercase; margin-bottom:4px;">Animation Direction</div>
+            <div style="font-size:12px; color:#5A4030; line-height:1.6;">Warm illustration — not photorealistic, not flat or geometric. Somewhere between editorial illustration and Headspace animation: expressive, slightly textured, adult. Colour palette pulled directly from packaging. Music: quiet, specific, piano or acoustic — no builds.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S7: TOUCHPOINTS -->
+    <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div onClick="{{ togS7 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #9B7EC8;" style-hover="background:#FAF8FF;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#9B7EC8; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">07 — Campaign Across Touchpoints</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">In-store · Gifting SKU · Packaging · Digital · Print</div></div>
+        <div data-swmchev="s7" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-swmbody="s7" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="background:#FAF8FF; border-radius:6px; padding:11px 14px; border-left:2px solid #9B7EC8;">
+              <div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:4px;">In-Store — End-of-aisle display</div>
+              <p style="font-size:12px; color:#5A5080; line-height:1.6; margin:0;">Instead of a standard product stack, the display presents varieties side by side with small behavioural descriptor cards — not tasting notes, but occasion cues. <em>'For the morning you own.' 'For the afternoon you share.'</em> The gifting SKU sits at the display and again in the checkout impulse zone.</p>
+            </div>
+            <div style="background:#FAF8FF; border-radius:6px; padding:11px 14px; border-left:2px solid #9B7EC8;">
+              <div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:4px;">Gifting SKU — "For You."</div>
+              <p style="font-size:12px; color:#5A5080; line-height:1.6; margin:0;">Gift-ready sleeve of 4 capsules, curated varieties, designed to be grabbed at checkout alongside your own pack. Minimal copy needed on the outer sleeve — the Mizo Coffee Selection branding provides context, the lead communication is the act of giving.</p>
+            </div>
+            <div style="background:#FAF8FF; border-radius:6px; padding:11px 14px; border-left:2px solid #9B7EC8;">
+              <div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:4px;">Packaging Integration</div>
+              <p style="font-size:12px; color:#5A5080; line-height:1.6; margin:0;">Campaign tagline on secondary packaging. The inner panel — the moment you open the box and choose a capsule — carries a single line: <em>'What will it be?'</em> Activates the selection metaphor at the exact right moment.</p>
+            </div>
+            <div style="background:#FAF8FF; border-radius:6px; padding:11px 14px; border-left:2px solid #9B7EC8;">
+              <div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:4px;">Digital / Social</div>
+              <p style="font-size:12px; color:#5A5080; line-height:1.6; margin:0;">Statics and short-form video anchored in the selection moment: hands, options, the pause. For gifting: real situations, minimal staging. A coffee left at reception. A pack tucked into a gym bag. A message that just says 'left you something.' UGC: #MySelection.</p>
+            </div>
+            <div style="background:#FAF8FF; border-radius:6px; padding:11px 14px; border-left:2px solid #9B7EC8;">
+              <div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:4px;">Print / Press</div>
+              <p style="font-size:12px; color:#5A5080; line-height:1.6; margin:0;">Single editorial-style image, no product arrangement, no recipe. The selection moment, shot cleanly. The tagline. The pack. Nothing else.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S8: VIRAL / ENGAGEMENT -->
+    <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div onClick="{{ togS8 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #E05858;" style-hover="background:#FFF8F8;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#E05858; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">08 — Consumer Engagement + Viral</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">5 mechanics — low friction, high resonance.</div></div>
+        <div data-swmchev="s8" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-swmbody="s8" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
+          <div style="display:flex; flex-direction:column; gap:7px;">
+            <div style="background:#FFF0EE; border-radius:7px; padding:12px 14px; border-left:3px solid #E05858;">
+              <div style="font-family:'DM Mono',monospace; font-size:8px; color:#E05858; text-transform:uppercase; margin-bottom:4px;">1. #MySelection</div>
+              <p style="font-size:13px; color:#5A2020; line-height:1.65; margin:0;">Dead simple. Share what you picked, or who you picked it for. The gifting angle gives it genuine emotional fuel: <em>'Left this for my colleague on her last day. She always took the espresso.'</em> That's a real post. The mechanic needs no incentive — the gesture is the content.</p>
+            </div>
+            <div style="background:#FFF8F8; border-radius:6px; padding:11px 14px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#E05858; text-transform:uppercase; margin-bottom:4px;">2. The Desk Drop</div><p style="font-size:13px; color:#5A3838; line-height:1.65; margin:0;">A gifting ritual seeded by the brand. Leave a capsule on someone's desk, no note. Photograph it, post it, tag someone. Seed with micro-creators in real workplaces, then let it run without brand overlay.</p></div>
+            <div style="background:#FFF8F8; border-radius:6px; padding:11px 14px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#E05858; text-transform:uppercase; margin-bottom:4px;">3. "You Know What They'd Pick" Generator</div><p style="font-size:13px; color:#5A3838; line-height:1.65; margin:0;">A simple online tool or Stories quiz: answer 5 questions about someone and it recommends which Mizo variety they'd choose. Output shareable: 'I think [Name] is a Dark Roast morning person.' Tags the person, invites them to confirm or dispute.</p></div>
+            <div style="background:#FFF8F8; border-radius:6px; padding:11px 14px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#E05858; text-transform:uppercase; margin-bottom:4px;">4. The Selection Filter</div><p style="font-size:13px; color:#5A3838; line-height:1.65; margin:0;">Instagram/TikTok filter that 'selects' a Mizo variety based on mood, time of day, or who you're with. The mechanic mirrors the campaign's central idea: even when a tool picks for you, someone made the decision to use it.</p></div>
+            <div style="background:#FFF8F8; border-radius:6px; padding:11px 14px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#E05858; text-transform:uppercase; margin-bottom:4px;">5. In-Store Selection Challenge</div><p style="font-size:13px; color:#5A3838; line-height:1.65; margin:0;">POS mechanic: a small card asks you to pick a variety based on a behavioural descriptor, not the product name. Scan to reveal which variety you chose + chance to win a full Selection box. Drives trial of non-default varieties.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div style="max-width:1080px; margin:0 auto; padding:8px 18px 24px; text-align:center;">
+  <span style="font-family:'DM Mono',monospace; font-size:9px; color:#C0B8B0; letter-spacing:0.12em; text-transform:uppercase;">DOUPLA Creative &amp; Digital · Budapest · MCS2026 Confidential</span>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { open: {} };
+
+  toggleSection(id) {
+    const cur = !!this.state.open[id];
+    this.setState(s => ({ open: { ...s.open, [id]: !cur } }));
+  }
+
+  componentDidMount() { this.applyState(); }
+  componentDidUpdate() { this.applyState(); }
+
+  applyState() {
+    const { open } = this.state;
+    document.querySelectorAll('[data-swmbody]').forEach(el => {
+      const id = el.getAttribute('data-swmbody');
+      el.style.maxHeight = open[id] ? '3000px' : '0';
+      el.style.transition = 'max-height 420ms ease';
+      el.style.overflow = 'hidden';
+    });
+    document.querySelectorAll('[data-swmchev]').forEach(el => {
+      const id = el.getAttribute('data-swmchev');
+      el.style.transform = open[id] ? 'rotate(180deg)' : 'rotate(0deg)';
+      el.style.transition = 'transform 300ms ease';
+    });
+  }
+
+  renderVals() {
+    const IDS = ['s1','s2','s3','s4','s5','s6','s7','s8'];
+    const t = id => () => this.toggleSection(id);
+    return {
+      togS1: t('s1'), togS2: t('s2'), togS3: t('s3'), togS4: t('s4'),
+      togS5: t('s5'), togS6: t('s6'), togS7: t('s7'), togS8: t('s8'),
+      expandAll: () => {
+        const next = {};
+        IDS.forEach(id => next[id] = true);
+        this.setState({ open: next });
+      },
+      collapseAll: () => this.setState({ open: {} }),
+    };
+  }
+}
+</script>
+</body>
+</html>

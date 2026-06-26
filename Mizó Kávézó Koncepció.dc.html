@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #F0EAE0; font-family: 'DM Sans', sans-serif; color: #1A1A1A; }
+  ::-webkit-scrollbar { width: 5px; } ::-webkit-scrollbar-track { background: #F0EAE0; } ::-webkit-scrollbar-thumb { background: #D0C8BC; border-radius: 3px; }
+  @media (max-width: 860px) { #mzlay { flex-direction: column !important; } #mznav { position: static !important; width: auto !important; } }
+</style>
+</helmet>
+
+<!-- HERO -->
+<div style="background:#1A1208; padding:48px 36px 40px; position:relative; overflow:hidden;">
+  <div style="position:absolute;inset:0;opacity:0.05;"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><filter id="hg"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"></feTurbulence></filter><rect width="100%" height="100%" filter="url(#hg)"></rect></svg></div>
+  <div style="max-width:1080px; margin:0 auto; position:relative;">
+    <div style="font-family:'DM Mono',monospace; font-size:10px; color:#B8975A44; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:16px;">DOUPLA Creative &amp; Digital · MCS2026</div>
+    <div style="line-height:1; margin-bottom:12px;">
+      <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(36px,5.5vw,66px); color:#F0E4CC; letter-spacing:-0.03em;">Mi</span><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(36px,5.5vw,66px); color:#B8975A; letter-spacing:-0.03em;">ZÓ</span><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(36px,5.5vw,66px); color:#F0E4CC; letter-spacing:-0.03em;"> Ká</span><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(36px,5.5vw,66px); color:#F0E4CC; opacity:0.4; letter-spacing:-0.03em;">vé</span><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(36px,5.5vw,66px); color:#B8975A; letter-spacing:-0.03em;">ZÓ</span>
+    </div>
+    <div style="font-family:'Space Grotesk',sans-serif; font-size:clamp(14px,1.8vw,20px); color:#B8975A; font-style:italic; margin-bottom:16px;">"A Mizó Kávézó mindig nyitva van."</div>
+    <p style="font-size:14px; color:#907050; line-height:1.65; max-width:600px; margin:0 0 16px;">A Mizo márkanév vége és a "kávézó" szó közepe ugyanaz a hang: <strong style="color:#B8975A;">ZÓ</strong>. Ez a kampány születési pillanata.</p>
+    <div style="display:flex; gap:7px; flex-wrap:wrap;">
+      <span style="background:rgba(184,151,90,0.14); border:1px solid rgba(184,151,90,0.28); border-radius:20px; padding:4px 11px; font-family:'DM Mono',monospace; font-size:9px; color:#B8975A; text-transform:uppercase; letter-spacing:0.1em;">AI-alapú kampány</span>
+      <span style="background:rgba(184,151,90,0.14); border:1px solid rgba(184,151,90,0.28); border-radius:20px; padding:4px 11px; font-family:'DM Mono',monospace; font-size:9px; color:#B8975A; text-transform:uppercase; letter-spacing:0.1em;">Pop-up Mechanic</span>
+      <span style="background:rgba(184,151,90,0.14); border:1px solid rgba(184,151,90,0.28); border-radius:20px; padding:4px 11px; font-family:'DM Mono',monospace; font-size:9px; color:#B8975A; text-transform:uppercase; letter-spacing:0.1em;">AR Filter</span>
+      <span style="background:rgba(184,151,90,0.14); border:1px solid rgba(184,151,90,0.28); border-radius:20px; padding:4px 11px; font-family:'DM Mono',monospace; font-size:9px; color:#B8975A; text-transform:uppercase; letter-spacing:0.1em;">22 NanoBanana prompt</span>
+    </div>
+  </div>
+</div>
+
+<div id="mzlay" style="max-width:1080px; margin:0 auto; display:flex; gap:20px; padding:22px 18px; align-items:flex-start;">
+
+  <!-- SIDEBAR NAV -->
+  <div id="mznav" style="width:182px; flex-shrink:0; position:sticky; top:14px;">
+    <div style="background:#FFF; border-radius:10px; padding:12px; box-shadow:0 1px 4px rgba(0,0,0,0.07);">
+      <div style="font-family:'DM Mono',monospace; font-size:8px; color:#A09880; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:8px; padding-bottom:6px; border-bottom:1px solid #F0E8E0;">Tartalom</div>
+      <div style="display:flex; flex-direction:column; gap:1px;">
+        <button onClick="{{ togS1 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; margin-right:4px;">01</span>Brand Essence</button>
+        <button onClick="{{ togS2 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; margin-right:4px;">02</span>Stratégia</button>
+        <button onClick="{{ togS3 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; margin-right:4px;">03</span>Big Idea</button>
+        <button onClick="{{ togS4 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; margin-right:4px;">04</span>KV + ToV</button>
+        <button onClick="{{ togS5 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; margin-right:4px;">05</span>Tagline</button>
+        <button onClick="{{ togS6 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; margin-right:4px;">06</span>Média</button>
+        <button onClick="{{ togS7 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; margin-right:4px;">07</span>TVC Storyline</button>
+        <button onClick="{{ togS8 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; margin-right:4px;">08</span>Touchpointok</button>
+        <button onClick="{{ togS9 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; margin-right:4px;">09</span>Virális Mech.</button>
+        <div style="margin-top:6px; padding-top:6px; border-top:1px solid #F0E8E0; display:flex; flex-direction:column; gap:2px;">
+          <button onClick="{{ togS10 }}" style="text-align:left; background:#FBF6EC; border:1px solid #E8D8A0; border-radius:5px; padding:6px 8px; cursor:pointer; font-size:11px; color:#8A6820; font-weight:600; width:100%;" style-hover="background:#F5EDD8;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; margin-right:4px;">10</span>Pop-up Kampány ✦</button>
+          <button onClick="{{ togS11 }}" style="text-align:left; background:#FBF6EC; border:1px solid #E8D8A0; border-radius:5px; padding:6px 8px; cursor:pointer; font-size:11px; color:#8A6820; font-weight:600; width:100%;" style-hover="background:#F5EDD8;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; margin-right:4px;">11</span>POS Vizualizáció ✦</button>
+        </div>
+        <div style="margin-top:6px; padding-top:6px; border-top:1px solid #F0E8E0; display:flex; gap:4px;">
+          <button onClick="{{ expandAll }}" style="flex:1; background:none; border:1px solid #E8D8A0; border-radius:4px; padding:5px; cursor:pointer; font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase;" style-hover="background:#FBF6EC;">▸ Mind</button>
+          <button onClick="{{ collapseAll }}" style="flex:1; background:none; border:1px solid #DDD0C8; border-radius:4px; padding:5px; cursor:pointer; font-family:'DM Mono',monospace; font-size:8px; color:#A09880; text-transform:uppercase;" style-hover="background:#F8F4EE;">▾ Bezár</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTIONS -->
+  <div style="flex:1; min-width:0; display:flex; flex-direction:column; gap:5px;">
+
+    <!-- S1 BRAND ESSENCE -->
+    <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div onClick="{{ togS1 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #B8975A;" style-hover="background:#FDFAF6;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#B8975A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">01 — Stratégiai Alap</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">Brand Essence + OBI</div></div>
+        <div data-mzchev="s1" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-mzbody="s1" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
+          <div style="background:#FBF6EC; border-radius:7px; padding:12px 16px; margin-bottom:12px; border-left:3px solid #B8975A;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; margin-bottom:5px;">Brand Essence</div><div style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:700; color:#1A1A1A;">"A Mizó Kávézó mindig nyitva van."</div></div>
+          <div style="display:flex; flex-direction:column; gap:7px;">
+            <div style="background:#F8F4EE; border-radius:6px; padding:11px 14px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; margin-bottom:3px;">OBI 1 — Jelenlét alkalom nélkül</div><p style="font-size:13px; color:#5A4A38; line-height:1.65; margin:0 0 4px;">A kávézói élmény eddig egy helyhez kötött. A Mizó Kávézó ezt feloldja.</p><div style="font-family:'DM Mono',monospace; font-size:9px; color:#A09078;">→ az alkalom nem trigger, hanem a brand maga hozza létre</div></div>
+            <div style="background:#F8F4EE; border-radius:6px; padding:11px 14px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; margin-bottom:3px;">OBI 2 — AI-által teremtett, egyénileg megélt</div><p style="font-size:13px; color:#5A4A38; line-height:1.65; margin:0 0 4px;">Minden foglalónak egyedi vizuális pillanat. Amit régen CGI-stúdió kellett — ma egy sprint.</p><div style="font-family:'DM Mono',monospace; font-size:9px; color:#A09078;">→ a személyre szabottság vizuális élményben él, nem CRM-ben</div></div>
+            <div style="background:#F8F4EE; border-radius:6px; padding:11px 14px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; margin-bottom:3px;">OBI 3 — Magyar rím, valódi kávé</div><p style="font-size:13px; color:#5A4A38; line-height:1.65; margin:0 0 4px;">100% Arabica + 100% Mizo tej. Kettő igazi. Egy kávézó.</p><div style="font-family:'DM Mono',monospace; font-size:9px; color:#A09078;">→ az összetevő-transzparencia a kávézói hitelesség alapja</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; font-family:'DM Mono',monospace; font-size:9px; color:#C8A96A; opacity:0.4; letter-spacing:0.08em;">↓ ebből következik a stratégiai váltás</div>
+
+    <!-- S2 STRATÉGIA -->
+    <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div onClick="{{ togS2 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #D4894A;" style-hover="background:#FFFAF6;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#D4894A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">02 — Stratégia</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">A stratégiai váltás + 3 kampányréteg</div></div>
+        <div data-mzchev="s2" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-mzbody="s2" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
+          <div style="background:#FFF8F2; border-radius:7px; padding:11px 14px; margin-bottom:12px; border-left:3px solid #D4894A;"><p style="font-size:13px; color:#5A3A20; line-height:1.65; margin:0;">Az MCS eddig <strong>terméket kommunikált</strong>. A relaunch-tól kezdve <strong>helyet kommunikál</strong>. A versenytársak kávét árulnak. Az MCS élményt ad — és az élménynek neve van: Mizó Kávézó.</p></div>
+          <div style="display:flex; flex-direction:column; gap:7px;">
+            <div style="background:#FFF8F2; border-radius:6px; padding:11px 14px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#D4894A; text-transform:uppercase; margin-bottom:3px;">1. réteg — Branded World (0–3. hónap)</div><p style="font-size:13px; color:#6A5040; line-height:1.65; margin:0;">AI-generált vizuális identitás. Cél: a fogyasztó megismerje a Mizó Kávézót — mint fogalmat, mint helyet.</p></div>
+            <div style="background:#FFF8F2; border-radius:6px; padding:11px 14px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#D4894A; text-transform:uppercase; margin-bottom:3px;">2. réteg — Interakció (3–6. hónap)</div><p style="font-size:13px; color:#6A5040; line-height:1.65; margin:0;">"Foglalj asztalt" mechanic aktiválása. UGC naturálisan nő ebben a fázisban.</p></div>
+            <div style="background:#FFF8F2; border-radius:6px; padding:11px 14px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#D4894A; text-transform:uppercase; margin-bottom:3px;">3. réteg — Fizikai megjelenés (6–12. hónap)</div><p style="font-size:13px; color:#6A5040; line-height:1.65; margin:0;">A Mizó Kávézó elmegy a boltba. Digitális és fizikai találkozik a kasszánál.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; font-family:'DM Mono',monospace; font-size:9px; color:#C8A96A; opacity:0.4; letter-spacing:0.08em;">↓ ebből születik a big idea</div>
+
+    <!-- S3 BIG IDEA -->
+    <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div onClick="{{ togS3 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #9B7EC8;" style-hover="background:#FAF8FF;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#9B7EC8; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">03 — Big Idea</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">Mindenhol megnyílik — csak neked, csak most.</div></div>
+        <div data-mzchev="s3" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-mzbody="s3" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
+          <p style="font-size:13px; color:#4A4A4A; line-height:1.75; margin:0 0 12px;">A kampány motorja: a kávézói pillanat egyszerre vágyott és elérhetetlen. Sorban állni nincs idő. Beülni drága. A Mizó Kávézó erre válaszol — és mert AI-alapú, minden válasza egyéni.</p>
+          <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:7px;">
+            <div style="background:#FAF8FF; border-radius:6px; padding:10px 12px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#9B7EC8; text-transform:uppercase; margin-bottom:3px;">TV / OLV</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">Kávézóajtó kinyílik — mögötte a te valódi helyszíned, kávézói fénnyel</div></div>
+            <div style="background:#FAF8FF; border-radius:6px; padding:10px 12px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#9B7EC8; text-transform:uppercase; margin-bottom:3px;">OOH</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">Kávézóajtó a plakáton — átlátszó, mögötte a valódi utcakép</div></div>
+            <div style="background:#FAF8FF; border-radius:6px; padding:10px 12px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#9B7EC8; text-transform:uppercase; margin-bottom:3px;">In-store</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">Ajtókeretes display a polcnál — a Mizó Kávézó bejárata</div></div>
+            <div style="background:#FAF8FF; border-radius:6px; padding:10px 12px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#9B7EC8; text-transform:uppercase; margin-bottom:3px;">AR Filter</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">TikTok + Instagram: kávézóajtó valóban kinyílik a telefonon</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S4 KV + TOV -->
+    <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div onClick="{{ togS4 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #4A8FD9;" style-hover="background:#F8FCFF;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#4A8FD9; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">04 — Kreatív Irány</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">KV Rendszer + Tone of Voice</div></div>
+        <div data-mzchev="s4" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-mzbody="s4" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
+          <div style="font-family:'DM Mono',monospace; font-size:8px; color:#4A8FD9; text-transform:uppercase; margin-bottom:8px; letter-spacing:0.1em;">4 Key Visual</div>
+          <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:14px;">
+            <div style="display:flex; gap:8px; background:#EEF4FF; border-radius:6px; padding:10px 12px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#4A8FD9; width:26px; flex-shrink:0; padding-top:2px;">KV1</span><div><div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:2px;">"A Megnyíló Ajtó" — hero KV</div><div style="font-size:12px; color:#5A6080; line-height:1.55;">Sötét fa kávézóajtó, félig nyitva. Mögötte nem belső — hanem reggeli autó, iroda, park. MCS doboz az ajtófélfán.</div></div></div>
+            <div style="display:flex; gap:8px; background:#EEF4FF; border-radius:6px; padding:10px 12px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#4A8FD9; width:26px; flex-shrink:0; padding-top:2px;">KV2</span><div><div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:2px;">"A Foglalás"</div><div style="font-size:12px; color:#5A6080; line-height:1.55;">Fehér kártya, kézírásos: "Fenntartva: [Név]. Asztal: [helyszín]. Idő: most."</div></div></div>
+            <div style="display:flex; gap:8px; background:#EEF4FF; border-radius:6px; padding:10px 12px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#4A8FD9; width:26px; flex-shrink:0; padding-top:2px;">KV3</span><div><div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:2px;">"Az Asztal"</div><div style="font-size:12px; color:#5A6080; line-height:1.55;">AI-generált kávézói asztal — metróban, irodában, parkolóban. A kettő vizuálisan nem kizárja egymást.</div></div></div>
+            <div style="display:flex; gap:8px; background:#EEF4FF; border-radius:6px; padding:10px 12px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#4A8FD9; width:26px; flex-shrink:0; padding-top:2px;">KV4</span><div><div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:2px;">"Szezonális ablak" — rotáló</div><div style="font-size:12px; color:#5A6080; line-height:1.55;">Gőzös kávézóablak, kézírással: "Reggeli menü" / "Délutáni szünet" — napszakhoz igazítható.</div></div></div>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:7px;">
+            <div style="background:#EEF4FF; border-radius:6px; padding:10px 12px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#2A6088; text-transform:uppercase; margin-bottom:4px;">IGEN</div><div style="font-size:12px; color:#3A4A60; line-height:1.65;">"A te asztalod fennmaradt."<br>"Nem kell foglalás. De szívesen fogadjuk."</div></div>
+            <div style="background:#FFF0EE; border-radius:6px; padding:10px 12px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#C04040; text-transform:uppercase; margin-bottom:4px;">NEM</div><div style="font-size:12px; color:#602020; line-height:1.65;">"Prémium élmény" · "Csatlakozz"<br>Felkiáltójel bárhol</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S5 TAGLINE -->
+    <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div onClick="{{ togS5 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #7B68EE;" style-hover="background:#FAF8FF;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#7B68EE; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">05 — Tagline Rendszer</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">Fő tagline + médium-specifikus változatok</div></div>
+        <div data-mzchev="s5" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-mzbody="s5" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
+          <div style="background:#F3F0FF; border:1px solid #D0C8F0; border-radius:7px; padding:12px 16px; margin-bottom:12px; text-align:center;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#7B68EE; text-transform:uppercase; margin-bottom:5px;">Fő tagline</div><div style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:700; color:#1A1A1A;">"A Mizó Kávézó mindig nyitva van."</div></div>
+          <div style="display:flex; flex-direction:column; gap:4px; margin-bottom:10px;">
+            <div style="display:flex; align-items:center; gap:10px; padding:7px 10px; background:#F8F6FF; border-radius:4px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#7B68EE; width:110px; flex-shrink:0; text-transform:uppercase;">TV zárókép</span><span style="font-size:12px; color:#1A1A1A;">"A Mizó Kávézó. Mindig nyitva."</span></div>
+            <div style="display:flex; align-items:center; gap:10px; padding:7px 10px; background:#F8F6FF; border-radius:4px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#7B68EE; width:110px; flex-shrink:0; text-transform:uppercase;">OOH</span><span style="font-size:12px; color:#1A1A1A;">"Sorban állás nélkül."</span></div>
+            <div style="display:flex; align-items:center; gap:10px; padding:7px 10px; background:#F8F6FF; border-radius:4px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#7B68EE; width:110px; flex-shrink:0; text-transform:uppercase;">In-store shelf</span><span style="font-size:12px; color:#1A1A1A;">"A te asztalod fennmaradt."</span></div>
+            <div style="display:flex; align-items:center; gap:10px; padding:7px 10px; background:#F8F6FF; border-radius:4px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#7B68EE; width:110px; flex-shrink:0; text-transform:uppercase;">Social / TikTok</span><span style="font-size:12px; color:#1A1A1A;">"Foglalj helyet."</span></div>
+            <div style="display:flex; align-items:center; gap:10px; padding:7px 10px; background:#F8F6FF; border-radius:4px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#7B68EE; width:110px; flex-shrink:0; text-transform:uppercase;">Csomagolás QR</span><span style="font-size:12px; color:#1A1A1A;">"Nyitva."</span></div>
+          </div>
+          <div style="background:#F3F0FF; border:1px solid #D8D0F8; border-radius:6px; padding:10px 13px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#7B68EE; text-transform:uppercase; margin-bottom:3px;">Rímalapú variáns</div><div style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:700; color:#1A1A1A;">"Ha nincs időd — Mizó Kávézó."</div><div style="font-size:11px; color:#6060A0; margin-top:3px;">Mi-ZÓ × kávéZÓ. Ahol a fül dönt, nem a szem.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S6 MÉDIA -->
+    <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div onClick="{{ togS6 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #2AA8A0;" style-hover="background:#F8FFFC;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#2AA8A0; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">06 — Média Stratégia</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">4 fázis · csatornabontással</div></div>
+        <div data-mzchev="s6" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-mzbody="s6" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="background:#EEFAF9; border-radius:7px; padding:12px 14px; border-left:3px solid #2AA8A0;">
+              <div style="font-family:'DM Mono',monospace; font-size:8px; color:#2AA8A0; text-transform:uppercase; margin-bottom:8px;">Launch — 2026 febr.–márc. (8 hét)</div>
+              <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:4px; text-align:center;">
+                <div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; color:#2AA8A0;">40%</div><div style="font-family:'DM Mono',monospace; font-size:8px; color:#5A9898; text-transform:uppercase;">TV</div></div>
+                <div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; color:#3ABAB2;">22%</div><div style="font-family:'DM Mono',monospace; font-size:8px; color:#5A9898; text-transform:uppercase;">OOH</div></div>
+                <div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; color:#4ACAC2;">18%</div><div style="font-family:'DM Mono',monospace; font-size:8px; color:#5A9898; text-transform:uppercase;">OLV</div></div>
+                <div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; color:#5AD4CC;">12%</div><div style="font-family:'DM Mono',monospace; font-size:8px; color:#5A9898; text-transform:uppercase;">TikTok</div></div>
+                <div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; color:#6ADAD4;">8%</div><div style="font-family:'DM Mono',monospace; font-size:8px; color:#5A9898; text-transform:uppercase;">Spotify</div></div>
+              </div>
+            </div>
+            <div style="background:#F0FAF9; border-radius:6px; padding:10px 14px; border-left:3px solid #4ABAB2;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#4ABAB2; text-transform:uppercase; margin-bottom:3px;">Engagement — márc.–máj.</div><div style="font-size:12px; color:#3A7070; line-height:1.6;">Meta/IG 32% · TikTok 28% · Influencer micro 22% · TV pulsing 10% · Podcast 8%</div></div>
+            <div style="background:#F0FAF9; border-radius:6px; padding:10px 14px; border-left:3px solid #5AC8C0;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#5AC8C0; text-transform:uppercase; margin-bottom:3px;">Nyár + ősz</div><div style="font-size:12px; color:#3A7070; line-height:1.6;">Nyár: OOH heavy, szomjassági trigger · Ősz: "A Mizó Kávézó visszavár" — TV + digital</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S7 TVC -->
+    <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div onClick="{{ togS7 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #4DAF6B;" style-hover="background:#F8FFF8;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#4DAF6B; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">07 — TVC Storyline</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">A Megnyíló Ajtó — 20 mp film</div></div>
+        <div data-mzchev="s7" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-mzbody="s7" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
+          <div style="display:flex; flex-direction:column; gap:5px;">
+            <div style="display:flex; gap:10px; background:#F0F8F1; border-radius:5px; padding:9px 12px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#4DAF6B; flex-shrink:0; width:38px; padding-top:2px;">0–2 mp</span><span style="font-size:12px; color:#3A3A3A; line-height:1.55;">Fekete. Egy kulcs forog a zárban. Felirat: <em>"05:47."</em></span></div>
+            <div style="display:flex; gap:10px; background:#F0F8F1; border-radius:5px; padding:9px 12px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#4DAF6B; flex-shrink:0; width:38px; padding-top:2px;">2–6 mp</span><span style="font-size:12px; color:#3A3A3A; line-height:1.55;">Kávézóajtó kinyílik. Mögötte nem belső — reggeli autó, napfény. AI/CGI hybrid technika.</span></div>
+            <div style="display:flex; gap:10px; background:#F0F8F1; border-radius:5px; padding:9px 12px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#4DAF6B; flex-shrink:0; width:38px; padding-top:2px;">6–10 mp</span><span style="font-size:12px; color:#3A3A3A; line-height:1.55;">Ugyanaz az ajtó kinyílik irodán, metróállomáson, parkban. 1 mp/kép, folyamatos nyitással.</span></div>
+            <div style="display:flex; gap:10px; background:#F0F8F1; border-radius:5px; padding:9px 12px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#4DAF6B; flex-shrink:0; width:38px; padding-top:2px;">10–15 mp</span><span style="font-size:12px; color:#3A3A3A; line-height:1.55;">Utolsó nyitás: mögötte a néző helyszíne. Az asztalon MCS doboz. Üres asztal — az övé.</span></div>
+            <div style="display:flex; gap:10px; background:#E8F8EC; border-radius:5px; padding:9px 12px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#4DAF6B; flex-shrink:0; width:38px; padding-top:2px;">18–20 mp</span><span style="font-size:12px; color:#1A1A1A; font-weight:600; line-height:1.55;">Fekete képen fehér: <em>"A Mizó Kávézó mindig nyitva van."</em> Logo.</span></div>
+          </div>
+          <div style="background:#F8F4EE; border-radius:5px; padding:9px 12px; margin-top:10px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#888; text-transform:uppercase; margin-bottom:3px;">Tech note</div><div style="font-size:12px; color:#6A6A6A; line-height:1.55;">Seedance / Veo 3 compositing + Midjourney interiőr. Régen 3–4M Ft CGI. Ma: 2–3 hetes sprint.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S8 TOUCHPOINTOK -->
+    <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div onClick="{{ togS8 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #E05858;" style-hover="background:#FFF8F8;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#E05858; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">08 — Touchpointok</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">Digitális + In-store kampány</div></div>
+        <div data-mzchev="s8" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-mzbody="s8" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
+          <div style="font-family:'DM Mono',monospace; font-size:8px; color:#E05858; text-transform:uppercase; margin-bottom:7px; letter-spacing:0.1em;">Digitális</div>
+          <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:14px;">
+            <div style="background:#FFF0EE; border-radius:6px; padding:10px 12px;"><div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:2px;">A. "Foglalj asztalt" AI landing page</div><div style="font-size:12px; color:#6A3A3A; line-height:1.55;">Microsite: név + napszak → AI-kép → foglalási kártya → social share → QR → virális loop. Stack: Lovable.dev + Supabase + Claude API + Midjourney.</div></div>
+            <div style="background:#FFF0EE; border-radius:6px; padding:10px 12px;"><div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:2px;">B. AR Filter — "Nyisd ki a Mizó Kávézót"</div><div style="font-size:12px; color:#6A3A3A; line-height:1.55;">TikTok + Instagram AR: kávézóbelső rávetül a kamera képére. MCS doboz felismerés. Meta Spark + TikTok Effect House.</div></div>
+            <div style="background:#FFF0EE; border-radius:6px; padding:10px 12px;"><div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:2px;">C. Spotify branded playlist</div><div style="font-size:12px; color:#6A3A3A; line-height:1.55;">"Mizó Kávézó — Reggeli." 45 perces instrumentális, heti frissülő, AI-generált szezonális borítóval.</div></div>
+          </div>
+          <div style="font-family:'DM Mono',monospace; font-size:8px; color:#E05858; text-transform:uppercase; margin-bottom:7px; letter-spacing:0.1em;">In-store</div>
+          <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:6px;">
+            <div style="background:#FFF8F8; border-radius:5px; padding:9px 11px;"><div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:2px;">Kávézóbejárat padlódisplay</div><div style="font-size:11px; color:#6A4A4A; line-height:1.5;">Ajtóküszöb padlómatrica + fém+fa ajtókeret a polc felett</div></div>
+            <div style="background:#FFF8F8; border-radius:5px; padding:9px 11px;"><div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:2px;">"Fenntartva" shelf-stopper</div><div style="font-size:11px; color:#6A4A4A; line-height:1.5;">Fa tábla réz lábbal. Instagrammable, alacsony cost.</div></div>
+            <div style="background:#FFF8F8; border-radius:5px; padding:9px 11px;"><div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:2px;">Foglalás a csomagoláson</div><div style="font-size:11px; color:#6A4A4A; line-height:1.5;">QR a microsite-ra. Boarding-pass stílus.</div></div>
+            <div style="background:#FFF8F8; border-radius:5px; padding:9px 11px;"><div style="font-weight:600; font-size:12px; color:#1A1A1A; margin-bottom:2px;">Aroma-aktiváció pilot</div><div style="font-size:11px; color:#6A4A4A; line-height:1.5;">5–8 áruház. Hangérzékelős kávéillat-burst.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S9 VIRÁLIS -->
+    <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div onClick="{{ togS9 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #C8A96A;" style-hover="background:#FDFAF6;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#C8A96A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">09 — Virális Mechanikák</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">5 mechanic a terjedéshez</div></div>
+        <div data-mzchev="s9" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-mzbody="s9" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
+          <div style="display:flex; flex-direction:column; gap:7px;">
+            <div style="background:#FBF6EC; border-radius:6px; padding:11px 14px; border-left:3px solid #C8A96A;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#C8A96A; text-transform:uppercase; margin-bottom:3px;">1. "Foglalj asztalt" — fő mechanic</div><p style="font-size:13px; color:#5A4A2A; line-height:1.6; margin:0;">Generált kép → social share → QR → új foglalás. 10.000 kártya felénél 3-4 ismerő látja: 150K+ organikus elérés, nulla médiaköltés.</p></div>
+            <div style="background:#F8F4EE; border-radius:6px; padding:11px 14px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#C8A96A; text-transform:uppercase; margin-bottom:3px;">2. #MizóKávézó TikTok Challenge</div><p style="font-size:13px; color:#5A4A2A; line-height:1.6; margin:0;">10-15 micro-influencer egyszerre, AR-filterrel. Kérdés: <strong>"Hol nyílt ki a te Mizó Kávézód?"</strong></p></div>
+            <div style="background:#F8F4EE; border-radius:6px; padding:11px 14px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#C8A96A; text-transform:uppercase; margin-bottom:3px;">3. IRL Pop-up — "Mizó Kávézó Hét"</div><p style="font-size:13px; color:#5A4A2A; line-height:1.6; margin:0;">Évente egyszer, 50–100 nm-es branded tér Budapesten. AI-világ a fizikai térben. Ingyenes kóstoltatás, AR-installáció.</p></div>
+            <div style="background:#F8F4EE; border-radius:6px; padding:11px 14px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#C8A96A; text-transform:uppercase; margin-bottom:3px;">4. AI Barista Persona</div><p style="font-size:13px; color:#5A4A2A; line-height:1.6; margin:0;">AI-generált vizuális persona ("Noémi") — heti szólam a brand IG-n. Emberi arc influencer-szerződés nélkül. Transzparensen AI.</p></div>
+            <div style="background:#F8F4EE; border-radius:6px; padding:11px 14px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#C8A96A; text-transform:uppercase; margin-bottom:3px;">5. Podcast "A Mizó Kávézó rádiócsatornája"</div><p style="font-size:13px; color:#5A4A2A; line-height:1.6; margin:0;">Reggeli podcastokban: "A mai epizódot a Mizó Kávézó kísér — nyitva van, amíg hallgatod." A rímet a fül rögzíti.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S10 POP-UP KAMPÁNY -->
+    <div style="background:#FBF6EC; border-radius:10px; border:2px solid #E8D8A0; overflow:hidden; box-shadow:0 2px 8px rgba(184,151,90,0.12);">
+      <div onClick="{{ togS10 }}" style="display:flex; align-items:center; padding:16px 20px; cursor:pointer; gap:12px; border-left:5px solid #B8975A;" style-hover="background:#F5EDD8;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#B8975A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">10 — Pop-up Kampány ✦ NanoBanana Pro</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#2A1808;">"NYISD KI. MEGNYÍLIK." · 10 helyszín · 30 mp storyboard</div></div>
+        <div data-mzchev="s10" style="color:#B8975A; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-mzbody="s10" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #E8D8A0;">
+          <!-- Mechanic + referencia -->
+          <div style="background:#1A1208; border-radius:8px; padding:14px 18px; margin-bottom:14px;">
+            <div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; margin-bottom:6px; letter-spacing:0.12em;">A mechanic — egy mondat</div>
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:700; color:#F0E4CC; margin-bottom:6px;">Kinyitod az MCS dobozt → a Mizó Kávézó megnyílik körülötted.</div>
+            <div style="font-size:12px; color:#907050; line-height:1.55;">Referencia: TNT "Push to Add Drama" (2012) — de nem gomb, hanem doboznyitás. Dráma helyett: kávézó.</div>
+          </div>
+          <!-- Signature bútor-set -->
+          <div style="font-family:'DM Mono',monospace; font-size:8px; color:#8A6820; text-transform:uppercase; margin-bottom:8px; letter-spacing:0.1em;">Signature bútor-set — minden spotban azonos</div>
+          <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:7px; margin-bottom:14px;">
+            <div style="background:#FFF; border-radius:6px; padding:10px 12px; border:1px solid #E8D8A0;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; margin-bottom:3px;">SZÉK</div><div style="font-size:12px; color:#4A3A20; line-height:1.55;">Tolix A-típus, krémfehér. Háttámlán: "MIZÓ KÁVÉZÓ". Néhol alig látható kávéfolt.</div></div>
+            <div style="background:#FFF; border-radius:6px; padding:10px 12px; border:1px solid #E8D8A0;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; margin-bottom:3px;">ASZTAL</div><div style="font-size:12px; color:#4A3A20; line-height:1.55;">Ø60 cm kör, fehér Carrara márvány-mintás lap, fekete acél talppal. "FENNTARTVA" réz tábla.</div></div>
+            <div style="background:#FFF; border-radius:6px; padding:10px 12px; border:1px solid #E8D8A0;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; margin-bottom:3px;">ESERNYŐ</div><div style="font-size:12px; color:#4A3A20; line-height:1.55;">Fekete canvas, krémszínű szegéllyel. Belül: "MIZÓ KÁVÉZÓ — MINDIG NYITVA".</div></div>
+            <div style="background:#FFF; border-radius:6px; padding:10px 12px; border:1px solid #E8D8A0;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; margin-bottom:3px;">KÖTÉNY</div><div style="font-size:12px; color:#4A3A20; line-height:1.55;">Fekete vászonkötény, mellkason hímzett "MIZÓ KÁVÉZÓ" felirat.</div></div>
+          </div>
+          <!-- Storyboard 30mp -->
+          <div style="font-family:'DM Mono',monospace; font-size:8px; color:#8A6820; text-transform:uppercase; margin-bottom:8px; letter-spacing:0.1em;">Storyboard — 30 mp TV spot</div>
+          <div style="display:flex; flex-direction:column; gap:5px; margin-bottom:14px;">
+            <div style="display:flex; gap:10px; background:#FFF; border-radius:5px; padding:9px 12px; border:1px solid #E8D8A0;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; flex-shrink:0; width:48px; padding-top:2px;">0–3 mp</span><span style="font-size:12px; color:#3A3A3A; line-height:1.55;">Forgalmas egri barokk főtér. Fogyasztó áll, kezében MCS doboz. Dokumentarista, semmi dráma.</span></div>
+            <div style="display:flex; gap:10px; background:#FFF; border-radius:5px; padding:9px 12px; border:1px solid #E8D8A0;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; flex-shrink:0; width:48px; padding-top:2px;">3–6 mp</span><span style="font-size:12px; color:#3A3A3A; line-height:1.55;">Közelkép: kezek kinyitják az MCS dobozt. Kattanás hangja. Kis fényfelvillanás.</span></div>
+            <div style="display:flex; gap:10px; background:#FFF; border-radius:5px; padding:9px 12px; border:1px solid #E8D8A0;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; flex-shrink:0; width:48px; padding-top:2px;">6–14 mp</span><span style="font-size:12px; color:#3A3A3A; line-height:1.55;">Háttérből rohannak: barista cipeli a Tolix-széket, másik hozza az asztalt, nyitja az esernyőt. Vidám, abszurd, gyors.</span></div>
+            <div style="display:flex; gap:10px; background:#FFF; border-radius:5px; padding:9px 12px; border:1px solid #E8D8A0;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; flex-shrink:0; width:48px; padding-top:2px;">14–22 mp</span><span style="font-size:12px; color:#3A3A3A; line-height:1.55;">Fogyasztó leül. "FENNTARTVA" tábla cserélődik személyre szabottra. Esernyő alatt kávézói ambient. Nevet. Iszik.</span></div>
+            <div style="display:flex; gap:10px; background:#FFF; border-radius:5px; padding:9px 12px; border:1px solid #E8D8A0;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; flex-shrink:0; width:48px; padding-top:2px;">22–27 mp</span><span style="font-size:12px; color:#3A3A3A; line-height:1.55;">Felállás. Barista visszaszalad — 5 mp alatt minden eltűnik. Fogyasztó egyedül, MCS-szel. Körülötte tapsolnak.</span></div>
+            <div style="display:flex; gap:10px; background:#1A1208; border-radius:5px; padding:9px 12px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; flex-shrink:0; width:48px; padding-top:2px;">27–30 mp</span><span style="font-size:12px; color:#F0E4CC; font-weight:600; line-height:1.55;">Fekete. Krémfehér szék + asztal + MCS doboz. "Nyisd ki. Megnyílik." Logo.</span></div>
+          </div>
+          <!-- NanoBanana prompts S10 -->
+          <div style="font-family:'DM Mono',monospace; font-size:8px; color:#8A6820; text-transform:uppercase; margin-bottom:8px; letter-spacing:0.1em;">NanoBanana Pro — 10 prompt · 16:9 helyszín-kompozíciók</div>
+          <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:6px;">
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:6px; align-items:center; margin-bottom:5px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">01</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 6px; font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase;">Egri Főtér</span></div><div style="font-weight:600; font-size:12px; color:#F0E4CC; margin-bottom:3px;">A Megérkezés</div><div style="font-size:11px; color:#907050; line-height:1.5;">Napsütéses barokk főtér, krémfehér szék + márvány asztal a kövezeten. Nő kinyílt MCS dobozzal, körülötte megálló tömeg.</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:6px; align-items:center; margin-bottom:5px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">02</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 6px; font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase;">Balaton Strand</span></div><div style="font-weight:600; font-size:12px; color:#F0E4CC; margin-bottom:3px;">Homokos Meglepetés</div><div style="font-size:11px; color:#907050; line-height:1.5;">Zsúfolt strandon a homokba süllyedő márvány asztal, fekete esernyő. Kötényeső férfi sprinterként rohan a széket hozva.</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:6px; align-items:center; margin-bottom:5px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">03</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 6px; font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase;">Keleti pályaudvar</span></div><div style="font-weight:600; font-size:12px; color:#F0E4CC; margin-bottom:3px;">Reggeli Rush</div><div style="font-size:11px; color:#907050; line-height:1.5;">Felülnézet: öltönyös férfi ül a pop-up kávézó-szigeten, körötte teljes sebességen zúg a reggeli tömeg.</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:6px; align-items:center; margin-bottom:5px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">04</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 6px; font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase;">Napraforgómező</span></div><div style="font-weight:600; font-size:12px; color:#F0E4CC; margin-bottom:3px;">Alföldi Varázslat</div><div style="font-size:11px; color:#907050; line-height:1.5;">Horizont-szélességű napraforgótábla. A bútorset egyedül, emberek nélkül. Surreális csend. Cobalt ég, prompt: no people.</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:6px; align-items:center; margin-bottom:5px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">05</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 6px; font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase;">Tokaji szőlőhegy</span></div><div style="font-weight:600; font-size:12px; color:#F0E4CC; margin-bottom:3px;">Őszi Szüret</div><div style="font-size:11px; color:#907050; line-height:1.5;">Lejtős szőlősorban enyhén bedöntve az asztal. Aranyszínű késő délutáni fény, Bodrog völgye mögötte.</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:6px; align-items:center; margin-bottom:5px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">06</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 6px; font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase;">Pécs belváros</span></div><div style="font-weight:600; font-size:12px; color:#F0E4CC; margin-bottom:3px;">Színes Házak Előtt</div><div style="font-size:11px; color:#907050; line-height:1.5;">Mediterrán színű homlokzatok közt a krémfehér-fekete bútor grafikus ellentétként. Nő nevet, telefont fog.</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:6px; align-items:center; margin-bottom:5px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">07</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 6px; font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase;">Vidéki buszmegálló</span></div><div style="font-weight:600; font-size:12px; color:#F0E4CC; margin-bottom:3px;">A Legtöbb Hely</div><div style="font-size:11px; color:#907050; line-height:1.5;">Sárga fém váróban összeszorítva a bútorset. Deadpan humor. "KÖVETKEZŐ JÁRAT: MOST" felirat.</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:6px; align-items:center; margin-bottom:5px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">08</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 6px; font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase;">Éjjeli Eger</span></div><div style="font-weight:600; font-size:12px; color:#F0E4CC; margin-bottom:3px;">Kék Óra</div><div style="font-size:11px; color:#907050; line-height:1.5;">Naplemente utáni kobalt ég + arany épületvilágítás. Gyertyalámpák az asztalon. Esernyő csukva. "Mindig nyitva."</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:6px; align-items:center; margin-bottom:5px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">09</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 6px; font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase;">Fesztiváltömeg</span></div><div style="font-weight:600; font-size:12px; color:#F0E4CC; margin-bottom:3px;">Csendes Sziget</div><div style="font-size:11px; color:#907050; line-height:1.5;">3 barát tökéletesen nyugodtan a pop-up kávézóban, körülöttük vibrál a fesztivál. 3 szék, 2 MCS doboz.</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:6px; align-items:center; margin-bottom:5px;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">10</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 6px; font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase;">Product Hero</span></div><div style="font-weight:600; font-size:12px; color:#F0E4CC; margin-bottom:3px;">A Szék és a Doboz</div><div style="font-size:11px; color:#907050; line-height:1.5;">Stúdió. Krémfehér Tolix szék a kép jobb felén, MCS doboz a párnán. 85mm, f/8. Ultra-éles. Logónak hely balra.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S11 POS VIZUALIZÁCIÓ -->
+    <div style="background:#FBF6EC; border-radius:10px; border:2px solid #E8D8A0; overflow:hidden; box-shadow:0 2px 8px rgba(184,151,90,0.12);">
+      <div onClick="{{ togS11 }}" style="display:flex; align-items:center; padding:16px 20px; cursor:pointer; gap:12px; border-left:5px solid #B8975A;" style-hover="background:#F5EDD8;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#B8975A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">11 — POS Vizualizáció ✦ NanoBanana Pro</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#2A1808;">12 in-situ POS prompt · szupermarket → kampusz → iroda</div></div>
+        <div data-mzchev="s11" style="color:#B8975A; font-size:13px; transition:transform 300ms ease;">↓</div>
+      </div>
+      <div data-mzbody="s11" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #E8D8A0;">
+          <div style="background:#FFF; border-radius:7px; padding:11px 14px; margin-bottom:12px; border-left:3px solid #B8975A;"><p style="font-size:13px; color:#4A3A20; line-height:1.65; margin:0;">Minden POS elemen visszatér a signature bútor-set: a Tolix szék kontúrja, márvány asztallap, "FENNTARTVA" réz tábla, fekete esernyő. A promptok in-situ lifestyle mockupok — a kész POS-t a valódi helyszínen mutatják be.</p></div>
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:6px;">
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:4px; align-items:center; margin-bottom:5px; flex-wrap:wrap;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">01</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 5px; font-family:'DM Mono',monospace; font-size:7px; color:#B8975A; text-transform:uppercase;">Floor graphic</span></div><div style="font-weight:600; font-size:11px; color:#F0E4CC; margin-bottom:2px;">Szupermarket aisle</div><div style="font-size:10px; color:#907050; line-height:1.5;">Tesco/Spar/Auchan padlómatrica: kávézó-küszöb motívum a hűtő előtt. Matt laminált, élek láthatatlanok.</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:4px; align-items:center; margin-bottom:5px; flex-wrap:wrap;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">02</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 5px; font-family:'DM Mono',monospace; font-size:7px; color:#B8975A; text-transform:uppercase;">Shelf stopper</span></div><div style="font-weight:600; font-size:11px; color:#F0E4CC; margin-bottom:2px;">Polcszomszéd kinyúló</div><div style="font-size:10px; color:#907050; line-height:1.5;">Tolix szék + márvány asztal illusztrációja feketén. "A TE ASZTALODAT FENNTARTOTTUK." MCS sor mögötte.</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:4px; align-items:center; margin-bottom:5px; flex-wrap:wrap;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">03</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 5px; font-family:'DM Mono',monospace; font-size:7px; color:#B8975A; text-transform:uppercase;">FSU display</span></div><div style="font-weight:600; font-size:11px; color:#F0E4CC; margin-bottom:2px;">Tesco aisle-vég</div><div style="font-size:10px; color:#907050; line-height:1.5;">180 cm-es szabadon álló display, top panelon pop-up kávézó-jelenet. "NYISD KI. MEGNYÍLIK." Padlón küszöb-grafika.</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:4px; align-items:center; margin-bottom:5px; flex-wrap:wrap;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">04</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 5px; font-family:'DM Mono',monospace; font-size:7px; color:#B8975A; text-transform:uppercase;">Counter display</span></div><div style="font-weight:600; font-size:11px; color:#F0E4CC; margin-bottom:2px;">Kasszapult / benzinkút</div><div style="font-size:10px; color:#907050; line-height:1.5;">A5-alapterületű asztali display, 4 MCS doboz legyező-elrendezésben. "TE IS MEGNYITHATOD." Háttérvilágítás.</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:4px; align-items:center; margin-bottom:5px; flex-wrap:wrap;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">05</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 5px; font-family:'DM Mono',monospace; font-size:7px; color:#B8975A; text-transform:uppercase;">Cooler door wrap</span></div><div style="font-weight:600; font-size:11px; color:#F0E4CC; margin-bottom:2px;">Hűtőajtó illúzió</div><div style="font-size:10px; color:#907050; line-height:1.5;">Teljes méretű fólia: kávézóajtó dizájn. A üveg középső mezője szabad — az MCS polc látszik "kávézóablakként".</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:4px; align-items:center; margin-bottom:5px; flex-wrap:wrap;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">06</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 5px; font-family:'DM Mono',monospace; font-size:7px; color:#B8975A; text-transform:uppercase;">A-board</span></div><div style="font-weight:600; font-size:11px; color:#F0E4CC; margin-bottom:2px;">Üzlet / campus bejárat</div><div style="font-size:10px; color:#907050; line-height:1.5;">Krétafeliratos A-tábla: "MIZÓ KÁVÉZÓ / MA BELÉPÉS: MEGNYÍLIK." A tábla tövénél 1 MCS doboz "hanyagul" kitámasztva.</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:4px; align-items:center; margin-bottom:5px; flex-wrap:wrap;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">07</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 5px; font-family:'DM Mono',monospace; font-size:7px; color:#B8975A; text-transform:uppercase;">Counter + ambient</span></div><div style="font-weight:600; font-size:11px; color:#F0E4CC; margin-bottom:2px;">Egyetemi menza</div><div style="font-size:10px; color:#907050; line-height:1.5;">Büfé-pult sarokban counter display + menüsor lightboxon Mizó Kávézó branded insert. ELTE/BME/Corvinus.</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:4px; align-items:center; margin-bottom:5px; flex-wrap:wrap;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">08</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 5px; font-family:'DM Mono',monospace; font-size:7px; color:#B8975A; text-transform:uppercase;">Pillar wrap</span></div><div style="font-weight:600; font-size:11px; color:#F0E4CC; margin-bottom:2px;">Kampusz folyosó</div><div style="font-size:10px; color:#907050; line-height:1.5;">Négyzet-pilléren életméretű Tolix szék print — a szék "kinyúlik" a falról. Lábánál polc 3 valódi MCS dobozzal.</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:4px; align-items:center; margin-bottom:5px; flex-wrap:wrap;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">09</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 5px; font-family:'DM Mono',monospace; font-size:7px; color:#B8975A; text-transform:uppercase;">Bench ambient</span></div><div style="font-weight:600; font-size:11px; color:#F0E4CC; margin-bottom:2px;">Campus padok</div><div style="font-size:10px; color:#907050; line-height:1.5;">3 campus pad. Háttámlán "FENNTARTVA" tag. Pad ülőfelületén márvány asztallapot imitáló vinyl + MCS tartó.</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:4px; align-items:center; margin-bottom:5px; flex-wrap:wrap;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">10</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 5px; font-family:'DM Mono',monospace; font-size:7px; color:#B8975A; text-transform:uppercase;">Machine topper</span></div><div style="font-weight:600; font-size:11px; color:#F0E4CC; margin-bottom:2px;">Irodai breakroom</div><div style="font-size:10px; color:#907050; line-height:1.5;">Kapszulás kávégép mellé: mini fekete esernyő (Ø30 cm), alatta 3 MCS doboz, vinyl márvány asztallap-matrica.</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:4px; align-items:center; margin-bottom:5px; flex-wrap:wrap;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">11</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 5px; font-family:'DM Mono',monospace; font-size:7px; color:#B8975A; text-transform:uppercase;">Floor + standee</span></div><div style="font-weight:600; font-size:11px; color:#F0E4CC; margin-bottom:2px;">Mozi lobby / pláza</div><div style="font-size:10px; color:#907050; line-height:1.5;">Padlóra a bútor lábnyoma + standee: életméretű Tolix szék fotó MCS dobozzal. Emberek természetesen kerülik a kontúrt.</div></div>
+            <div style="background:#1A1208; border-radius:6px; padding:10px 12px;"><div style="display:flex; gap:4px; align-items:center; margin-bottom:5px; flex-wrap:wrap;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A;">12</span><span style="background:rgba(184,151,90,0.2); border-radius:3px; padding:1px 5px; font-family:'DM Mono',monospace; font-size:7px; color:#B8975A; text-transform:uppercase;">Header card</span></div><div style="font-weight:600; font-size:11px; color:#F0E4CC; margin-bottom:2px;">Polc felett</div><div style="font-size:10px; color:#907050; line-height:1.5;">30×15 cm-es polcfej, akriltartóban: Tolix szék szilhett feketén + "MIZÓ KÁVÉZÓ · 100% Arabica · 100% Mizo tej."</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div style="max-width:1080px; margin:0 auto; padding:10px 18px 24px; text-align:center;">
+  <span style="font-family:'DM Mono',monospace; font-size:9px; color:#C0B8B0; letter-spacing:0.12em; text-transform:uppercase;">DOUPLA Creative &amp; Digital · MCS2026 Kampányötlet v1.0 · Bizalmasan kezelendő</span>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { open: {} };
+
+  toggleSection(id) {
+    const cur = !!this.state.open[id];
+    this.setState(s => ({ open: { ...s.open, [id]: !cur } }));
+  }
+
+  componentDidMount() { this.applyState(); }
+  componentDidUpdate() { this.applyState(); }
+
+  applyState() {
+    const { open } = this.state;
+    document.querySelectorAll('[data-mzbody]').forEach(el => {
+      const id = el.getAttribute('data-mzbody');
+      el.style.maxHeight = open[id] ? '3000px' : '0';
+      el.style.transition = 'max-height 420ms ease';
+      el.style.overflow = 'hidden';
+    });
+    document.querySelectorAll('[data-mzchev]').forEach(el => {
+      const id = el.getAttribute('data-mzchev');
+      el.style.transform = open[id] ? 'rotate(180deg)' : 'rotate(0deg)';
+      el.style.transition = 'transform 300ms ease';
+    });
+  }
+
+  renderVals() {
+    const IDS = ['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11'];
+    const t = id => () => this.toggleSection(id);
+    return {
+      togS1: t('s1'), togS2: t('s2'), togS3: t('s3'), togS4: t('s4'),
+      togS5: t('s5'), togS6: t('s6'), togS7: t('s7'), togS8: t('s8'),
+      togS9: t('s9'), togS10: t('s10'), togS11: t('s11'),
+      expandAll: () => {
+        const next = {};
+        IDS.forEach(id => next[id] = true);
+        this.setState({ open: next });
+      },
+      collapseAll: () => this.setState({ open: {} }),
+    };
+  }
+}
+</script>
+</body>
+</html>
