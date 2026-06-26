@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style data-omelette-print-defaults>
+@media print {
+  @page { margin: 0.5in; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid; }
+  figure, table, pre, blockquote, img, svg, tr, [class~="card" i] { break-inside: avoid; }
+  img, svg { max-width: 100%; }
+  p { orphans: 3; widows: 3; }
+}
+</style>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
@@ -8,10 +17,10 @@
 <body>
 <x-dc>
 <helmet>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; }
-  body { margin: 0; background: #F0EAE0; font-family: 'Inter', sans-serif; color: #1A1A1A; }
+  body { margin: 0; background: #F0EAE0; font-family: 'DM Sans', sans-serif; color: #1A1A1A; }
   ::-webkit-scrollbar { width: 5px; } ::-webkit-scrollbar-track { background: #F0EAE0; } ::-webkit-scrollbar-thumb { background: #D0C8BC; border-radius: 3px; }
   @media (max-width: 860px) { #swmlay { flex-direction: column !important; } #swmnav { position: static !important; width: auto !important; } }
 </style>
@@ -23,8 +32,8 @@
     <div style="font-family:'DM Mono',monospace; font-size:10px; color:#A09080; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:20px;">DOUPLA Creative &amp; Digital · MCS2026 · Confidential</div>
     <div style="display:flex; align-items:flex-start; gap:40px; flex-wrap:wrap;">
       <div style="flex:1; min-width:280px;">
-        <div style="font-family:'Inter',sans-serif; font-weight:700; font-size:clamp(32px,5vw,58px); color:#1C1008; letter-spacing:-0.03em; line-height:1.05; margin-bottom:16px;">Mizo Coffee<br>Selection</div>
-        <div style="font-family:'Inter',sans-serif; font-size:clamp(18px,2.5vw,26px); color:#7B4A2A; font-style:italic; margin-bottom:20px; font-weight:400;">A Selection Worth Making.</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(32px,5vw,58px); color:#1C1008; letter-spacing:-0.03em; line-height:1.05; margin-bottom:16px;">Mizo Coffee<br>Selection</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:clamp(18px,2.5vw,26px); color:#7B4A2A; font-style:italic; margin-bottom:20px; font-weight:400;">A Selection Worth Making.</div>
         <p style="font-size:14px; color:#6A5A48; line-height:1.7; max-width:540px; margin:0 0 20px;">2026 Relaunch — Full Campaign Development. The act of choosing has become rare. Mizo Coffee Selection occupies the opposite position: the coffee you chose, not the one you grabbed.</p>
         <div style="display:flex; gap:8px; flex-wrap:wrap;">
           <span style="background:#F0E4D4; border:1px solid #D8C4A8; border-radius:20px; padding:5px 13px; font-family:'DM Mono',monospace; font-size:10px; color:#7B4A2A; text-transform:uppercase; letter-spacing:0.1em;">Gifting mechanic</span>
@@ -34,9 +43,9 @@
       </div>
       <div style="background:#1C1008; border-radius:10px; padding:20px 24px; min-width:220px; max-width:300px;">
         <div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; letter-spacing:0.12em; margin-bottom:12px;">OBI — One Brief Idea</div>
-        <div style="font-family:'Inter',sans-serif; font-size:15px; font-weight:700; color:#F0E4CC; line-height:1.4; margin-bottom:10px;">"The right coffee isn't the one you grab. It's the one you pick."</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:700; color:#F0E4CC; line-height:1.4; margin-bottom:10px;">"The right coffee isn't the one you grab. It's the one you pick."</div>
         <div style="width:100%; height:1px; background:rgba(184,151,90,0.2); margin-bottom:10px;"></div>
-        <div style="font-family:'Inter',sans-serif; font-size:13px; color:#B8975A; font-style:italic;">Coffee for people who still bother to choose.</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:13px; color:#B8975A; font-style:italic;">Coffee for people who still bother to choose.</div>
       </div>
     </div>
   </div>
@@ -57,7 +66,6 @@
         <button onClick="{{ togS6 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#7B4A2A; margin-right:4px;">06</span>Animation / TVC</button>
         <button onClick="{{ togS7 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#7B4A2A; margin-right:4px;">07</span>Touchpoints</button>
         <button onClick="{{ togS8 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#7B4A2A; margin-right:4px;">08</span>Viral / Engagement</button>
-        <button onClick="{{ togS9 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#7B4A2A; font-weight:600; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#7B4A2A; margin-right:4px;">09</span>KV Gallery ✦</button>
         <div style="margin-top:6px; padding-top:6px; border-top:1px solid #F0E8E0; display:flex; gap:4px;">
           <button onClick="{{ expandAll }}" style="flex:1; background:none; border:1px solid #D8C4A8; border-radius:4px; padding:5px; cursor:pointer; font-family:'DM Mono',monospace; font-size:8px; color:#7B4A2A; text-transform:uppercase;" style-hover="background:#F5EDD8;">▸ Mind</button>
           <button onClick="{{ collapseAll }}" style="flex:1; background:none; border:1px solid #DDD0C8; border-radius:4px; padding:5px; cursor:pointer; font-family:'DM Mono',monospace; font-size:8px; color:#A09880; text-transform:uppercase;" style-hover="background:#F8F4EE;">▾ Zár</button>
@@ -72,7 +80,7 @@
     <!-- S1: BRAND ESSENCE -->
     <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
       <div onClick="{{ togS1 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #7B4A2A;" style-hover="background:#FDFAF6;">
-        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#7B4A2A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">01 — Brand Essence + OBI</div><div style="font-family:'Inter',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">Coffee for people who still bother to choose.</div></div>
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#7B4A2A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">01 — Brand Essence + OBI</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">Coffee for people who still bother to choose.</div></div>
         <div data-swmchev="s1" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
       </div>
       <div data-swmbody="s1" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
@@ -80,11 +88,11 @@
           <div style="background:#F8F2EC; border-radius:7px; padding:12px 16px; margin-bottom:14px; border-left:3px solid #7B4A2A;">
             <div style="font-family:'DM Mono',monospace; font-size:8px; color:#7B4A2A; text-transform:uppercase; margin-bottom:6px;">Brand Essence</div>
             <p style="font-size:13px; color:#4A3020; line-height:1.7; margin:0 0 8px;">The act of choosing has become rare. Most purchase decisions aren't decisions at all — they're habits, defaults, the thing in front of you. Mizo Coffee Selection occupies the opposite position: a curated range built on the premise that the act of selecting matters.</p>
-            <div style="font-family:'Inter',sans-serif; font-size:15px; font-weight:700; color:#1C1008; font-style:italic;">Not just what you drink, but what you give. What you leave on someone's desk. What you pick up when you're already there.</div>
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:700; color:#1C1008; font-style:italic;">Not just what you drink, but what you give. What you leave on someone's desk. What you pick up when you're already there.</div>
           </div>
           <div style="background:#1C1008; border-radius:7px; padding:12px 16px; margin-bottom:14px;">
             <div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; margin-bottom:6px;">OBI — One Brief Idea</div>
-            <div style="font-family:'Inter',sans-serif; font-size:16px; font-weight:700; color:#F0E4CC;">"The right coffee isn't the one you grab. It's the one you pick."</div>
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:700; color:#F0E4CC;">"The right coffee isn't the one you grab. It's the one you pick."</div>
             <div style="font-size:12px; color:#907050; margin-top:6px; line-height:1.55;">The word 'still' in the brand essence is doing real work — it positions deliberate choosing against convenience-first autopilot. Without being preachy about it.</div>
           </div>
           <div style="font-family:'DM Mono',monospace; font-size:8px; color:#A09080; text-transform:uppercase; margin-bottom:8px; letter-spacing:0.1em;">Brand Values</div>
@@ -104,7 +112,7 @@
     <!-- S2: BIG IDEA -->
     <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
       <div onClick="{{ togS2 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #C8763A;" style-hover="background:#FFFAF6;">
-        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#C8763A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">02 — Big Idea</div><div style="font-family:'Inter',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">The Pause Before You Pick.</div></div>
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#C8763A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">02 — Big Idea</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">The Pause Before You Pick.</div></div>
         <div data-swmchev="s2" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
       </div>
       <div data-swmbody="s2" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
@@ -132,7 +140,7 @@
     <!-- S3: KV + TOV -->
     <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
       <div onClick="{{ togS3 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #9B6A3A;" style-hover="background:#FDFAF6;">
-        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#9B6A3A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">03 — Key Visual + Tone of Voice</div><div style="font-family:'Inter',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">Warm without sentiment. Direct without coldness.</div></div>
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#9B6A3A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">03 — Key Visual + Tone of Voice</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">Warm without sentiment. Direct without coldness.</div></div>
         <div data-swmchev="s3" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
       </div>
       <div data-swmbody="s3" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
@@ -158,14 +166,14 @@
     <!-- S4: TAGLINE -->
     <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
       <div onClick="{{ togS4 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #B8975A;" style-hover="background:#FDFAF6;">
-        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#B8975A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">04 — Tagline / Slogan</div><div style="font-family:'Inter',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">A Selection Worth Making.</div></div>
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#B8975A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">04 — Tagline / Slogan</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">A Selection Worth Making.</div></div>
         <div data-swmchev="s4" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
       </div>
       <div data-swmbody="s4" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
         <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
           <div style="background:#1C1008; border-radius:7px; padding:14px 18px; margin-bottom:14px; text-align:center;">
             <div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; margin-bottom:8px;">Primary Tagline</div>
-            <div style="font-family:'Inter',sans-serif; font-size:22px; font-weight:700; color:#F0E4CC; letter-spacing:-0.02em;">A Selection Worth Making.</div>
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:22px; font-weight:700; color:#F0E4CC; letter-spacing:-0.02em;">A Selection Worth Making.</div>
             <div style="font-size:12px; color:#907050; margin-top:8px; line-height:1.55;">Works on two semantic levels simultaneously: the product range is worth selecting, and the act of making a selection is itself worthwhile. This double meaning is the campaign's core.</div>
           </div>
           <div style="font-family:'DM Mono',monospace; font-size:8px; color:#A09080; text-transform:uppercase; margin-bottom:8px; letter-spacing:0.1em;">Variant Usage</div>
@@ -182,7 +190,7 @@
     <!-- S5: MEDIA STRATEGY -->
     <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
       <div onClick="{{ togS5 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #2AA8A0;" style-hover="background:#F8FFFC;">
-        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#2AA8A0; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">05 — Media Strategy</div><div style="font-family:'Inter',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">2 phases · deliberate, not loud.</div></div>
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#2AA8A0; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">05 — Media Strategy</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">2 phases · deliberate, not loud.</div></div>
         <div data-swmchev="s5" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
       </div>
       <div data-swmbody="s5" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
@@ -216,7 +224,7 @@
     <!-- S6: ANIMATION / TVC -->
     <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
       <div onClick="{{ togS6 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #4DAF6B;" style-hover="background:#F8FFF8;">
-        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#4DAF6B; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">06 — 20-Second Animation</div><div style="font-family:'Inter',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">"The Extra One"</div></div>
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#4DAF6B; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">06 — 20-Second Animation</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">"The Extra One"</div></div>
         <div data-swmchev="s6" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
       </div>
       <div data-swmbody="s6" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
@@ -239,7 +247,7 @@
     <!-- S7: TOUCHPOINTS -->
     <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
       <div onClick="{{ togS7 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #9B7EC8;" style-hover="background:#FAF8FF;">
-        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#9B7EC8; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">07 — Campaign Across Touchpoints</div><div style="font-family:'Inter',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">In-store · Gifting SKU · Packaging · Digital · Print</div></div>
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#9B7EC8; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">07 — Campaign Across Touchpoints</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">In-store · Gifting SKU · Packaging · Digital · Print</div></div>
         <div data-swmchev="s7" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
       </div>
       <div data-swmbody="s7" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
@@ -274,7 +282,7 @@
     <!-- S8: VIRAL / ENGAGEMENT -->
     <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
       <div onClick="{{ togS8 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #E05858;" style-hover="background:#FFF8F8;">
-        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#E05858; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">08 — Consumer Engagement + Viral</div><div style="font-family:'Inter',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">5 mechanics — low friction, high resonance.</div></div>
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#E05858; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">08 — Consumer Engagement + Viral</div><div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">5 mechanics — low friction, high resonance.</div></div>
         <div data-swmchev="s8" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
       </div>
       <div data-swmbody="s8" style="max-height:0; overflow:hidden; transition:max-height 420ms ease;">
@@ -290,34 +298,6 @@
             <div style="background:#FFF8F8; border-radius:6px; padding:11px 14px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#E05858; text-transform:uppercase; margin-bottom:4px;">5. In-Store Selection Challenge</div><p style="font-size:13px; color:#5A3838; line-height:1.65; margin:0;">POS mechanic: a small card asks you to pick a variety based on a behavioural descriptor, not the product name. Scan to reveal which variety you chose + chance to win a full Selection box. Drives trial of non-default varieties.</p></div>
           </div>
           <div style="margin-top:12px; padding-top:10px; border-top:1px solid #E8E0D0;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#6A7060; text-transform:uppercase; margin-bottom:5px; letter-spacing:0.1em;">Kutatási alap</div><div style="display:flex; gap:5px; flex-wrap:wrap;"><div style="background:#0E1A10; border-radius:4px; padding:4px 9px; display:flex; gap:6px; align-items:baseline; flex-shrink:0;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#4A9060; white-space:nowrap;">I05 · Referral Gap</span><span style="font-size:11px; color:#88C8A0; line-height:1.35;">"Ismerőseim ajánlják": Mizo −1, Hell +10 = 11 pontos hátrány. Ha valaki megosztja, hogy ő a "Dark Roast típus" — az önkéntes márkaajánlás.</span></div></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- S9: KV GALLERY -->
-    <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
-      <div onClick="{{ togS9 }}" style="display:flex; align-items:center; padding:15px 20px; cursor:pointer; gap:12px; border-left:4px solid #7B4A2A;" style-hover="background:#FDFAF6;">
-        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#7B4A2A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">09 — Campaign Key Visuals</div><div style="font-family:'Inter',sans-serif; font-weight:700; font-size:15px; color:#1A1A1A;">AI-generált KV képek — 13 execúció</div></div>
-        <div data-swmchev="s9" style="color:#C8C0B8; font-size:13px; transition:transform 300ms ease;">↓</div>
-      </div>
-      <div data-swmbody="s9" style="max-height:0; overflow:hidden; transition:max-height 600ms ease;">
-        <div style="padding:18px 22px; border-top:1px solid #F0E8E0;">
-          <div style="font-family:'DM Mono',monospace; font-size:8px; color:#A09080; text-transform:uppercase; margin-bottom:14px; letter-spacing:0.1em;">Gifting mechanic · Selection moment · Desk drop execúciók</div>
-          <div style="columns:2; column-gap:10px;">
-            <div style="break-inside:avoid; margin-bottom:10px; border-radius:8px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.1);"><img src="uploads/openart-image_1782462997556_2800221b_1782462998102_38cdfeeb.png" style="width:100%; display:block;"></div>
-            <div style="break-inside:avoid; margin-bottom:10px; border-radius:8px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.1);"><img src="uploads/openart-image_1782463273348_63c0465c_1782463273499_1f617937.png" style="width:100%; display:block;"></div>
-            <div style="break-inside:avoid; margin-bottom:10px; border-radius:8px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.1);"><img src="uploads/openart-image_1782463274717_66fda672_1782463274934_5f91bee2.png" style="width:100%; display:block;"></div>
-            <div style="break-inside:avoid; margin-bottom:10px; border-radius:8px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.1);"><img src="uploads/openart-image_1782463281400_c9fece4d_1782463281468_fb0203e3.png" style="width:100%; display:block;"></div>
-            <div style="break-inside:avoid; margin-bottom:10px; border-radius:8px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.1);"><img src="uploads/openart-image_1782463285284_31de00d3_1782463285349_96cff71b.png" style="width:100%; display:block;"></div>
-            <div style="break-inside:avoid; margin-bottom:10px; border-radius:8px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.1);"><img src="uploads/openart-image_1782463290813_254ce1a6_1782463290896_33216a94.png" style="width:100%; display:block;"></div>
-            <div style="break-inside:avoid; margin-bottom:10px; border-radius:8px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.1);"><img src="uploads/openart-image_1782463334057_eacb015c_1782463334279_6025d425.png" style="width:100%; display:block;"></div>
-            <div style="break-inside:avoid; margin-bottom:10px; border-radius:8px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.1);"><img src="uploads/openart-image_1782463768958_59811f87_1782463769224_6fd9f738.png" style="width:100%; display:block;"></div>
-            <div style="break-inside:avoid; margin-bottom:10px; border-radius:8px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.1);"><img src="uploads/openart-image_1782463772888_bea22948_1782463774913_ec0dc14c.png" style="width:100%; display:block;"></div>
-            <div style="break-inside:avoid; margin-bottom:10px; border-radius:8px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.1);"><img src="uploads/openart-image_1782463775653_28a9374d_1782463776482_f6ca9184.png" style="width:100%; display:block;"></div>
-            <div style="break-inside:avoid; margin-bottom:10px; border-radius:8px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.1);"><img src="uploads/openart-image_1782463780799_c4bb0596_1782463780847_abaae163.png" style="width:100%; display:block;"></div>
-            <div style="break-inside:avoid; margin-bottom:10px; border-radius:8px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.1);"><img src="uploads/openart-image_1782463787264_555c8a48_1782463787346_2d85100b.png" style="width:100%; display:block;"></div>
-            <div style="break-inside:avoid; margin-bottom:10px; border-radius:8px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.1);"><img src="uploads/openart-image_1782463791783_763153a7_1782463791834_7f23aa48.png" style="width:100%; display:block;"></div>
-          </div>
         </div>
       </div>
     </div>
@@ -357,11 +337,11 @@ class Component extends DCLogic {
   }
 
   renderVals() {
-    const IDS = ['s1','s2','s3','s4','s5','s6','s7','s8','s9'];
+    const IDS = ['s1','s2','s3','s4','s5','s6','s7','s8'];
     const t = id => () => this.toggleSection(id);
     return {
       togS1: t('s1'), togS2: t('s2'), togS3: t('s3'), togS4: t('s4'),
-      togS5: t('s5'), togS6: t('s6'), togS7: t('s7'), togS8: t('s8'), togS9: t('s9'),
+      togS5: t('s5'), togS6: t('s6'), togS7: t('s7'), togS8: t('s8'),
       expandAll: () => {
         const next = {};
         IDS.forEach(id => next[id] = true);
@@ -371,6 +351,330 @@ class Component extends DCLogic {
     };
   }
 }
+</script>
+<script>
+(async () => {
+  if (!document.title || !document.title.trim()) document.title = "A Selection Worth Making";
+  // Prepend so page-supplied @page / break rules (deck-stage's margin:0,
+  // author CSS) keep source-order precedence over the baseline.
+  const baseCss = document.createElement('style');
+  baseCss.textContent = "@media print {\n  figure, table { break-inside: avoid; }\n  *, *::before, *::after {\n    print-color-adjust: exact; -webkit-print-color-adjust: exact;\n    backdrop-filter: none !important; -webkit-backdrop-filter: none !important;\n    animation-delay: -99s !important; animation-duration: .001s !important;\n    animation-iteration-count: 1 !important; animation-fill-mode: both !important;\n    animation-play-state: running !important; transition-duration: 0s !important;\n  }\n}";
+  document.head.prepend(baseCss);
+  if (document.readyState === 'loading') {
+    await new Promise((r) => document.addEventListener('DOMContentLoaded', r, { once: true }));
+  }
+  let ds = document.querySelector('deck-stage');
+  // whenDefined never resolves when nothing registers the element, so only
+  // await it when a <deck-stage> tag exists (and race a timeout regardless).
+  if (ds && !customElements.get('deck-stage')) {
+    try {
+      await Promise.race([
+        customElements.whenDefined('deck-stage'),
+        new Promise((r) => setTimeout(r, 3000)),
+      ]);
+    } catch (e) {}
+    ds = document.querySelector('deck-stage');
+  }
+  // dc-runtime assigns window.DCLogic at init and mounts into #dc-root on
+  // DOMContentLoaded; settle on that subtree so React has rendered before
+  // print(). Non-DC pages fall through to weighing body.
+  const isDc = !ds && 'DCLogic' in window;
+  const settleRoot = ds || (isDc ? document.getElementById('dc-root') : null) || document.body;
+  if (settleRoot) {
+    // Weigh only content children — skip script/style/template so inline
+    // Babel/CSS doesn't register as stable "content" before the framework
+    // has mounted anything.
+    const MEDIA = 'img,svg,canvas,video,picture,iframe,embed,object';
+    const weigh = () => {
+      let text = 0, media = 0;
+      for (const c of settleRoot.children) {
+        const t = c.tagName;
+        if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+        text += (c.textContent || '').trim().length;
+        media += c.querySelectorAll(MEDIA).length + (c.matches(MEDIA) ? 1 : 0);
+      }
+      return text + media * 100;
+    };
+    // "Non-zero and stable" alone is not sufficient to mean rendered: generic
+    // body can carry a static shell while async main content is pending, and
+    // #dc-root can carry the root DC's static text while child refs are still
+    // .sc-placeholder boxes. Gate generic on readyState 'complete', and never
+    // accept stability while a dc-runtime placeholder is present.
+    const isGeneric = settleRoot === document.body;
+    const deadline = Date.now() + 15000;
+    let last = -1, stable = 0;
+    while (Date.now() < deadline) {
+      const n = weigh();
+      const ready =
+        (!isGeneric || document.readyState === 'complete') &&
+        !settleRoot.querySelector('.sc-placeholder');
+      if (n > 0 && n === last && ready) { if (++stable >= 2) break; } else { stable = 0; }
+      last = n;
+      await new Promise((r) => setTimeout(r, 250));
+    }
+  }
+  // Reveal content gated on scroll or visibility before printing. Lazy <img>,
+  // IntersectionObserver fade-ins, and collapsed <details> don't render while
+  // off-screen, so a long page would print with them blank or closed. Open
+  // every <details>, force native-lazy images eager, and scroll the document
+  // through its full height to trip lazy-load + IO; then wait (bounded) for the
+  // newly-triggered images. Inert for deck-stage (slides aren't scroll-gated).
+  try {
+    for (const d of document.querySelectorAll('details')) d.open = true;
+    for (const img of document.querySelectorAll('img[loading="lazy"]'))
+      img.loading = 'eager';
+    const scroller = document.scrollingElement || document.documentElement;
+    const full = Math.max(scroller.scrollHeight, document.body.scrollHeight);
+    const step = window.innerHeight || 800;
+    for (let y = 0; y <= full; y += step) {
+      window.scrollTo(0, y);
+      await new Promise((r) => requestAnimationFrame(r));
+    }
+    window.scrollTo(0, 0);
+    await Promise.race([
+      Promise.all(
+        [...document.images].map((img) =>
+          img.complete
+            ? null
+            : new Promise((res) => {
+                img.addEventListener('load', res, { once: true });
+                img.addEventListener('error', res, { once: true });
+              })
+        )
+      ),
+      new Promise((r) => setTimeout(r, 4000)),
+    ]);
+  } catch (e) {}
+  try { await document.fonts.ready; } catch (e) {}
+  // Jump every animation to its end state so print() never captures a slide
+  // mid-entrance. Ordering matters: the 0s-transition style must be live
+  // BEFORE data-deck-active is set so attribute-keyed transitions don't
+  // start a (now-0s) run from the pre-active base.
+  const st = document.createElement('style');
+  st.textContent = '*,*::before,*::after{animation-delay:-99s !important;animation-duration:.001s !important;animation-iteration-count:1 !important;animation-fill-mode:both !important;animation-play-state:running !important;transition-duration:0s !important}';
+  document.head.appendChild(st);
+  for (const d of document.querySelectorAll('deck-stage')) {
+    for (const c of d.children) {
+      const t = c.tagName;
+      if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+      c.setAttribute('data-deck-active', '');
+    }
+  }
+  // Re-append deck-stage's @page last so no author @page can add a margin and
+  // spill each full-bleed slide onto two sheets. Backstop for old copies.
+  if (ds) {
+    let pg = document.getElementById('deck-stage-print-page');
+    if (!pg) {
+      pg = document.createElement('style');
+      pg.textContent = '@page{size:' + (+ds.getAttribute('width') || 1920) +
+        'px ' + (+ds.getAttribute('height') || 1080) + 'px;margin:0}';
+    }
+    document.body.appendChild(pg);
+  }
+  try {
+    const sweep = () => {
+      for (const a of document.getAnimations()) {
+        try { a.finish(); } catch (e) {
+          try { a.currentTime = (a.effect && a.effect.getComputedTiming().duration) || 0; a.pause(); } catch (e2) {}
+        }
+      }
+    };
+    sweep();
+    await new Promise((r) => requestAnimationFrame(r));
+    sweep();
+    await new Promise((r) => requestAnimationFrame(r));
+  } catch (e) {}
+  // Size the PDF page to the rendered design unless the file opted into
+  // standard paper via @page{size:letter|A4|…}. Decks own their own @page.
+  var __m = null;
+  try { __m = (() => {
+  var docEl = document.documentElement;
+  var doc = { width: docEl.scrollWidth, height: docEl.scrollHeight };
+
+  var ds = document.querySelector('deck-stage');
+  if (ds) {
+    var dw = Number(ds.getAttribute('width')) || 1920;
+    var dh = Number(ds.getAttribute('height')) || 1080;
+    var n = typeof ds.length === 'number' ? ds.length : ds.children.length;
+    var idx = typeof ds.index === 'number' ? ds.index : 0;
+    var frames = [];
+    for (var i = 0; i < n; i++) frames.push({ left: 0, top: 0, width: dw, height: dh });
+    return { kind: 'deck', doc: doc, frames: frames,
+      authored: frames.map(function(){return{width:true,height:true}}),
+      deck: { width: dw, height: dh, slideCount: n, index: idx },
+      signals: { paperPage: false, pxPage: false } };
+  }
+
+  var paperPage = false, pxPage = false;
+  var eachRule = function (fn) {
+    for (var s = 0; s < document.styleSheets.length; s++) {
+      var rs; try { rs = document.styleSheets[s].cssRules; } catch (e) { continue; }
+      for (var r = 0; r < rs.length; r++) {
+        fn(rs[r]);
+        if (rs[r].cssRules) for (var n = 0; n < rs[r].cssRules.length; n++) fn(rs[r].cssRules[n]);
+      }
+    }
+  };
+  eachRule(function (r) {
+    if (r.type !== 6) return;
+    var m = /\bsize\s*:\s*([^;}]+)/i.exec(r.cssText || '');
+    if (!m) return;
+    if (/\b(letter|a[3-5]|legal|ledger)\b/i.test(m[1])) paperPage = true;
+    if (/\d+(?:\.\d+)?px\b/i.test(m[1])) pxPage = true;
+  });
+  var signals = { paperPage: paperPage, pxPage: pxPage };
+
+  if (paperPage) {
+    return { kind: 'paper-doc', doc: doc, signals: signals,
+      frames: [{ left: 0, top: 0, width: doc.width, height: doc.height }],
+      authored: [{ width: false, height: false }] };
+  }
+
+  var pxVal = function (v) {
+    var m = /^(\d+(?:\.\d+)?)px$/.exec(v || ''); return m ? +m[1] : 0;
+  };
+  var authoredPx = function (el, prop) {
+    if (pxVal(el.style[prop])) return true;
+    var attr = el.getAttribute(prop);
+    if (attr && /^\d+$/.test(attr)) return true;
+    var hit = false;
+    eachRule(function (r) {
+      if (hit || r.type !== 1 || !r.style) return;
+      try { if (el.matches(r.selectorText) && pxVal(r.style[prop])) hit = true; } catch (e) {}
+    });
+    return hit;
+  };
+
+  var el = document.body;
+  for (;;) {
+    var kids = [];
+    for (var c = 0; c < el.children.length; c++) {
+      var t = el.children[c].tagName;
+      if (t !== 'SCRIPT' && t !== 'STYLE' && t !== 'TEMPLATE') kids.push(el.children[c]);
+    }
+    if (kids.length !== 1 || !(kids[0] instanceof HTMLElement)) break;
+    el.setAttribute('data-om-frame-wrap', '');
+    el = kids[0];
+    if (authoredPx(el, 'width')) break;
+  }
+
+  var sx = window.scrollX || 0, sy = window.scrollY || 0;
+  var rectOf = function (e) {
+    var r = e.getBoundingClientRect();
+    var oy; try { oy = getComputedStyle(e).overflowY; } catch (err) {}
+    var h = oy === 'visible' ? Math.max(r.height, e.scrollHeight || 0) : r.height;
+    return { left: r.left + sx, top: r.top + sy, width: r.width, height: h };
+  };
+
+  // Multi-frame: ≥2 visible non-fixed children, each with authored px width
+  // AND height, all within ±2px of each other. Off unless the page opts in
+  // via data-om-multi-frame on the stop element — guards against card grids
+  // and pricing tables that match the geometry but aren't separate canvases.
+  if (el.hasAttribute('data-om-multi-frame')) {
+    var cands = [];
+    for (var k = 0; k < el.children.length; k++) {
+      var ch = el.children[k];
+      var cs; try { cs = getComputedStyle(ch); } catch (e) { continue; }
+      if (cs.display === 'none' || cs.visibility === 'hidden' || cs.position === 'fixed') continue;
+      var rc = rectOf(ch);
+      if (rc.width < 2 || rc.height < 2) continue;
+      if (!authoredPx(ch, 'width') || !authoredPx(ch, 'height')) continue;
+      cands.push(rc);
+    }
+    if (cands.length >= 2) {
+      var w0 = cands[0].width, h0 = cands[0].height, ok = true;
+      for (var q = 1; q < cands.length; q++)
+        if (Math.abs(cands[q].width - w0) > 2 || Math.abs(cands[q].height - h0) > 2) ok = false;
+      if (ok) return { kind: 'multi-frame', doc: doc, signals: signals,
+        frames: cands, authored: cands.map(function(){return{width:true,height:true}}) };
+    }
+  }
+
+  return { kind: 'single-canvas', doc: doc, signals: signals,
+    frames: [rectOf(el)],
+    authored: [{ width: authoredPx(el, 'width'), height: authoredPx(el, 'height') }] };
+})(); } catch (e) {}
+  var frame = null;
+  if (__m && __m.kind === 'single-canvas') {
+    var f = __m.frames && __m.frames[0];
+    if (f && f.width >= 200 && f.height >= 200) {
+      frame = f;
+      var fst = document.createElement('style');
+      fst.textContent = '@media print{@page{size:' + f.width + 'px ' + f.height +
+        'px;margin:0}html,body,[data-om-frame-wrap]{padding:0!important;' +
+        'margin:0!important;background:none!important}}';
+      document.body.appendChild(fst);
+    }
+  }
+  // Relax break-inside on oversized elements. An element taller than a
+  // printable page can't honor break-inside: avoid — browsers either overflow
+  // it or push it whole to the next page, leaving a blank gap, then break it
+  // anyway at an arbitrary point. After the final layout (content revealed,
+  // animations jumped), find elements taller than a page that still compute
+  // break-inside: avoid and reset them to auto, so the browser breaks them at
+  // their children's boundaries instead (children keep their own avoid). PAGE_PX
+  // is a conservative portrait estimate at 96 CSS px/in — Letter/A4 usable
+  // height minus our 0.5in margins — so only clearly-oversized elements are
+  // touched and under-page elements still stay whole. Skipped for decks (slides
+  // are sized to the page) and for fixed-size canvases (frame set, or an author
+  // px-based @page) — runs as before for flowing docs on letter/A4.
+  try {
+    if (!ds && !frame && !(__m && __m.signals && __m.signals.pxPage)) {
+      const PAGE_PX = 1024;
+      // Our print defaults add a real @page margin only when the source has
+      // no @page of its own; computed style can't tell us (it reports screen
+      // media), so read the injected rule directly.
+      const defaults = document.querySelector('style[data-omelette-print-defaults]');
+      const pageInset = /@page\s*\{[^}]*margin/.test(defaults ? defaults.textContent || '' : '');
+      const SEL = 'section,article,figure,table,pre,blockquote,[class~="card" i],[class~="page" i],[class~="sheet" i]';
+      for (const el of document.body.querySelectorAll(SEL)) {
+        if (el instanceof HTMLElement && el.offsetHeight > PAGE_PX) {
+          el.setAttribute('data-om-oversized', '');
+          // Fake-paged docs simulate sheets with over-tall break-after:page
+          // boxes; honoring the break spills half-blank pages and ends a
+          // colored box mid-sheet. Flow them, and (only when we own the page
+          // inset) drop the redundant padding/background via the rule below.
+          const cs = getComputedStyle(el);
+          if (cs.breakAfter === 'page' || cs.pageBreakAfter === 'always') {
+            el.setAttribute('data-om-fakepage', '');
+          }
+        }
+      }
+      const ost = document.createElement('style');
+      ost.textContent = '@media print{' +
+        '[data-om-oversized]{break-inside:auto !important;page-break-inside:auto !important}' +
+        '[data-om-fakepage]{break-after:auto !important;page-break-after:auto !important}' +
+        (pageInset ? '[data-om-fakepage]{padding:0 !important;background:none !important}' : '') +
+        '}';
+      document.head.appendChild(ost);
+    }
+  } catch (e) {}
+  // macOS Preview renders Skia-PDF Luminosity soft-masks as opaque grey boxes;
+  // swap the CSS that triggers them for Preview-safe forms.
+  try {
+    for (const el of document.body.querySelectorAll('*')) {
+      const cs = getComputedStyle(el);
+
+      if (cs.boxShadow !== 'none' && cs.filter === 'none') {
+        const outs = [], kept = [];
+        for (const s of cs.boxShadow.split(/,(?![^(]*[)])/)) {
+          const t = s.trim();
+          const m = t.match(/^(rgba?[(][^)]+[)]) (-?[0-9.]+px) (-?[0-9.]+px) ([0-9.]+px) -?[0-9.]+px$/);
+          if (m && parseFloat(m[4]) > 0) outs.push('drop-shadow(' + m[2] + ' ' + m[3] + ' ' + m[4] + ' ' + m[1] + ')');
+          else kept.push(t);
+        }
+        if (outs.length) {
+          el.style.setProperty('filter', outs.join(' '), 'important');
+          el.style.setProperty('box-shadow', kept.join(', ') || 'none', 'important');
+        }
+      }
+
+      const mask = cs.maskImage && cs.maskImage !== 'none' ? cs.maskImage : cs.webkitMaskImage;
+      if (mask && mask !== 'none' && cs.filter === 'none') el.style.setProperty('filter', 'opacity(1)', 'important');
+    }
+  } catch (e) {}
+  setTimeout(() => { try { window.print(); } catch (e) {} }, 200);
+})();
 </script>
 </body>
 </html>
