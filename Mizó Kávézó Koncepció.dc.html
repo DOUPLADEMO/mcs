@@ -43,6 +43,7 @@
     <div style="background:#FFF; border-radius:10px; padding:12px; box-shadow:0 1px 4px rgba(0,0,0,0.07);">
       <div style="font-family:'DM Mono',monospace; font-size:8px; color:#A09880; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:8px; padding-bottom:6px; border-bottom:1px solid #F0E8E0;">Tartalom</div>
       <div style="display:flex; flex-direction:column; gap:1px;">
+        <button onClick="{{ togS0 }}" style="text-align:left; background:#1A1208; border:1px solid #3A2818; border-radius:5px; padding:6px 8px; cursor:pointer; font-size:11px; color:#B8975A; font-weight:600; width:100%; margin-bottom:3px;" style-hover="background:#2A1E0E;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; margin-right:4px;">00</span>Stratégiai Alap ★</button>
         <button onClick="{{ togS1 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; margin-right:4px;">01</span>Brand Essence</button>
         <button onClick="{{ togS2 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; margin-right:4px;">02</span>Stratégia</button>
         <button onClick="{{ togS3 }}" style="text-align:left; background:none; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:11px; color:#888; width:100%;" style-hover="background:#F8F4EE;color:#1A1A1A;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; margin-right:4px;">03</span>Big Idea</button>
@@ -67,6 +68,31 @@
 
   <!-- SECTIONS -->
   <div style="flex:1; min-width:0; display:flex; flex-direction:column; gap:5px;">
+
+    <!-- S0 STRATÉGIAI ALAP -->
+    <div style="background:#1A1208; border-radius:10px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.15); margin-bottom:5px;">
+      <div onClick="{{ togS0 }}" style="display:flex; align-items:center; padding:14px 20px; cursor:pointer; gap:12px; border-left:5px solid #B8975A;" style-hover="background:#221508;">
+        <div style="flex:1;"><div style="font-family:'DM Mono',monospace; font-size:9px; color:#B8975A; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px;">00 — Stratégiai alap</div><div style="font-family:'Inter',sans-serif; font-weight:700; font-size:15px; color:#F0E4CC;">Miért most, miért ez a három probléma, miért ez a válasz.</div></div>
+        <div data-mzchev="s0" style="color:#B8975A; font-size:13px; transition:transform 300ms ease; transform:rotate(180deg)">↓</div>
+      </div>
+      <div data-mzbody="s0" style="overflow:hidden; transition:max-height 420ms ease;">
+        <div style="padding:18px 22px; border-top:1px solid #2A1E0E; display:flex; flex-direction:column; gap:12px;">
+          <div style="background:#221508; border-radius:7px; padding:14px 16px; border-left:3px solid #B8975A;">
+            <div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; margin-bottom:6px;">01 — NeedScope: tej-zóna</div>
+            <p style="font-size:13px; color:#C8A888; line-height:1.7; margin:0;">A NeedScope-modell szerint az MCS a tej-zónában ül — gondoskodó, megbízható, tradicionális —, miközben a kategória elvárásai: dinamizmus, fiatalosság, energikuspág. A Hell pontosan a kategória közepén helyezkedik el, az MCS ezzel szemben.</p>
+          </div>
+          <div style="background:#221508; border-radius:7px; padding:14px 16px; border-left:3px solid #C8A96A;">
+            <div style="font-family:'DM Mono',monospace; font-size:8px; color:#C8A96A; text-transform:uppercase; margin-bottom:6px;">02 — 27 pontos fiatalosság-rés + purchase trigger</div>
+            <p style="font-size:13px; color:#C8A888; line-height:1.7; margin:0;">A brand tracking szerint a fiatalosság-indikátoron 27 pontos rés van a Hell javára (+24 vs −3). És: 39–39%-os döntetlen áll fenn brand power szintjén — mégis a Hell nyeri a polcot. Ez nem awareness-probléma. Ez purchase trigger-probléma: az MCS benne van a consideration set-ben, de a végsoő döntésnél valami nem billen át.</p>
+          </div>
+          <div style="background:#221508; border-radius:7px; padding:14px 16px; border-left:3px solid #D4894A;">
+            <div style="font-family:'DM Mono',monospace; font-size:8px; color:#D4894A; text-transform:uppercase; margin-bottom:6px;">03 — Miért a Mizó Kávézó válasz erre</div>
+            <p style="font-size:13px; color:#C8A888; line-height:1.7; margin:0 0 8px;">A tej-zóna problémát nem azzal kezeli, hogy elhagyja a Mizo örökségét, hanem egy új entitáson — a kávézón — keresztül fejezi ki: a Mizo tej és a 100% Arabica nem tejtermék-attribútum többé, hanem egy kávézó alapanyaga. A fiatalosság-rést a Felfedező archetype irányába mozdulással zárja: az „ajtó kinyílik” motívum aktív, kíváncsi cselekvés.</p>
+            <p style="font-size:13px; color:#C8A888; line-height:1.7; margin:0;">A purchase trigger-problémát a visszazárható kupak rituáléba emelésével oldja meg: a doboznyitás nem termékhasztálat, hanem a kávézó megnyitása — ezt a Hell alumínídobóza nem tudja reprodukálni.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- S1 BRAND ESSENCE -->
     <div style="background:#FFF; border-radius:10px; border:1px solid #EAE0D4; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
@@ -126,7 +152,8 @@
             <div style="background:#FAF8FF; border-radius:6px; padding:10px 12px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#9B7EC8; text-transform:uppercase; margin-bottom:3px;">In-store</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">Ajtókeretes display a polcnál — a Mizó Kávézó bejárata</div></div>
             <div style="background:#FAF8FF; border-radius:6px; padding:10px 12px;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#9B7EC8; text-transform:uppercase; margin-bottom:3px;">AR Filter</div><div style="font-size:12px; color:#4A4A4A; line-height:1.6;">TikTok + Instagram: kávézóajtó valóban kinyílik a telefonon</div></div>
           </div>
-          <div style="background:#1A1208; border-radius:7px; padding:11px 14px; margin-top:8px; border-left:3px solid #B8975A;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; margin-bottom:4px;">Fizikai proof point — visszazárható kupak</div><p style="font-size:12px; color:#C8A888; line-height:1.6; margin:0;">A visszazárható kupak az egyetlen funkcionális elem, amit a Hell tin can nem tud lemásolni. A fogyasztó nem azt meséli, hogy „bárhol ihat Mizót” — azt meséli, hogy kinyitotta és megnyílt a kávézó. Tin can: egyrányú. MCS: te döntöd el, mikor nyit és mikor zár a te Mizó Kávézód.</p></div>
+          <div style="background:#FAF8FF; border-radius:7px; padding:11px 14px; margin-top:8px; border-left:3px solid #9B7EC8;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#9B7EC8; text-transform:uppercase; margin-bottom:5px;">Stratégiai szűrő — katalógus vs. koncepció</div><p style="font-size:12px; color:#3A3060; line-height:1.65; margin:0 0 7px;">A kategória általánosan helyszín-katalógusban gondolkodik: strand, iroda, reggeli busz. A brand igazodik az alkalomhoz — követi a fogyasztót. A Mizó Kávézó megfordítja: a fogyasztó nyitja meg a brandet. A cselekvés iránya megfordul.</p><div style="background:#F3F0FF; border-radius:5px; padding:8px 11px; font-size:12px; color:#3A3060; font-weight:600; line-height:1.55;">Kreatív szűrő: „A helyszín nélkül is ugyanolyan erős a jelenet?” Ha a bútor és a rituálé viszi a képet, és a strand csak fokozza az abszurditást — a brand az aktív elem. Ha fordítva — visszaestunk a katalógusba.</div></div>
+          <div style="background:#1A1208; border-radius:7px; padding:11px 14px; margin-top:8px; border-left:3px solid #B8975A;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#B8975A; text-transform:uppercase; margin-bottom:4px;">Fizikai proof point — visszazárható kupak</div><p style="font-size:12px; color:#C8A888; line-height:1.6; margin:0 0 7px;">A visszazárható kupak az egyetlen funkcionális elem, amit a Hell tin can nem tud lemásolni. A fogyasztó nem azt meséli, hogy „bárhol ihat Mizót” — azt meséli, hogy kinyitotta és megnyílt a kávézó.</p><p style="font-size:12px; color:#907050; line-height:1.6; margin:0 0 6px; font-style:italic;">„cukros lotty, amit lehet iszogatni, kortyolgatni” — Urban Explorer kutatási összefoglaló</p><p style="font-size:12px; color:#C8A888; line-height:1.6; margin:0;">Ez pontosan az a fogyasztói viselkedési minta, amire a Mizó Kávézó rá van építve: kinyitja, visszazárja, visszateszi a táskájába, és újra kinyitja. A kupak nem kényelmi extra — a kategóriával kompatibilis életmód egyetlen fizikai bizonyítéka. <strong style="color:#B8975A;">Ez az ügyfél saját Discriminator-blokkjában is szerepelt — nem az ügynökség találta fel, csak kreatív fordítást adott neki.</strong></p></div>
           <div style="margin-top:10px; padding-top:10px; border-top:1px solid #E8E0D0;"><div style="font-family:'DM Mono',monospace; font-size:8px; color:#6A9878; text-transform:uppercase; margin-bottom:5px; letter-spacing:0.1em;">Kutatási alap</div><div style="display:flex; gap:5px; flex-wrap:wrap;"><div style="background:#0E1A10; border-radius:4px; padding:4px 9px; display:flex; gap:6px; align-items:baseline; flex-shrink:0;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#4A9060; white-space:nowrap;">I02 · Fiatalosság</span><span style="font-size:11px; color:#88C8A0; line-height:1.35;">Hell +24 vs Mizo −3 = 27 pontos rés. A big idea egyetlen feladata ezt zárni — de a saját útján, nem energiaital módra.</span></div><div style="background:#0E1A10; border-radius:4px; padding:4px 9px; display:flex; gap:6px; align-items:baseline; flex-shrink:0;"><span style="font-family:'DM Mono',monospace; font-size:8px; color:#4A9060; white-space:nowrap;">I04 · Felfedező</span><span style="font-size:11px; color:#88C8A0; line-height:1.35;">Az "ajtó megnyílik" motívum aktív, kíváncsi cselekvés — ez a Társ→Felfedező archetype-váltás kreatív fordítása</span></div></div></div>
         </div>
       </div>
@@ -384,7 +411,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { open: {} };
+  state = { open: { s0: true } };
 
   toggleSection(id) {
     const cur = !!this.state.open[id];
@@ -410,10 +437,10 @@ class Component extends DCLogic {
   }
 
   renderVals() {
-    const IDS = ['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12'];
+    const IDS = ['s0','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12'];
     const t = id => () => this.toggleSection(id);
     return {
-      togS1: t('s1'), togS2: t('s2'), togS3: t('s3'), togS4: t('s4'),
+      togS0: t('s0'), togS1: t('s1'), togS2: t('s2'), togS3: t('s3'), togS4: t('s4'),
       togS5: t('s5'), togS6: t('s6'), togS7: t('s7'), togS8: t('s8'),
       togS9: t('s9'), togS10: t('s10'), togS11: t('s11'), togS12: t('s12'),
       expandAll: () => {
